@@ -8,6 +8,7 @@
 
 #import "MainScreenTableViewDataSource.h"
 #import "NewEntryTableViewCell.h"
+#import "LabelAndSublabelTableViewCell.h"
 
 enum MainScreenTableViewRowName
 {
@@ -40,30 +41,37 @@ enum MainScreenTableViewRowName
         return cell;
     }else
     {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"viewEntry"];
+        LabelAndSublabelTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"viewEntry"];
         
         switch (indexPath.row)
         {
             case MainScreenTableViewRowNameHomework:
-                cell.textLabel.text = @"Homework";
+                cell.entryTypeLabel.text = @"Homework";
+                cell.numberOfEntriesLabel.text = @"2 Entries";
                 break;
             case MainScreenTableViewRowNameEssays:
-                cell.textLabel.text = @"Essays";
+                cell.entryTypeLabel.text = @"Essays";
+                cell.numberOfEntriesLabel.text = @"1 Entry";
                 break;
             case MainScreenTableViewRowNameProjects:
-                cell.textLabel.text = @"Projects";
+                cell.entryTypeLabel.text = @"Projects";
+                cell.numberOfEntriesLabel.text = @"0 Entries";
                 break;
             case MainScreenTableViewRowNameTests:
-                cell.textLabel.text = @"Tests";
+                cell.entryTypeLabel.text = @"Tests";
+                cell.numberOfEntriesLabel.text = @"1 Entry";
                 break;
             case MainScreenTableViewRowNameChores:
-                cell.textLabel.text = @"Chores";
+                cell.entryTypeLabel.text = @"Chores";
+                cell.numberOfEntriesLabel.text = @"0 Entries";
                 break;
             case MainScreenTableViewRowNamePractice:
-                cell.textLabel.text = @"Practice";
+                cell.entryTypeLabel.text = @"Practice";
+                cell.numberOfEntriesLabel.text = @"4 Entries";
                 break;
             case MainScreenTableViewRowNameOther:
-                cell.textLabel.text = @"Other";
+                cell.entryTypeLabel.text = @"Other";
+                cell.numberOfEntriesLabel.text = @"0 Entries";
                 break;
             default:
                 break;

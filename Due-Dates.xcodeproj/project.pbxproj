@@ -21,6 +21,7 @@
 		1FFB8E6C1B8BC28B00042907 /* FAQs.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E681B8BC28B00042907 /* FAQs.m */; };
 		1FFB8E711B8BC7BD00042907 /* MainScreenTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E701B8BC7BD00042907 /* MainScreenTableViewDataSource.m */; };
 		1FFB8E741B8BCA1B00042907 /* NewEntryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E731B8BCA1B00042907 /* NewEntryTableViewCell.m */; };
+		1FFB8E771B8BD1EF00042907 /* LabelAndSublabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E761B8BD1EF00042907 /* LabelAndSublabelTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		1FFB8E701B8BC7BD00042907 /* MainScreenTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScreenTableViewDataSource.m; sourceTree = "<group>"; };
 		1FFB8E721B8BCA1B00042907 /* NewEntryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewEntryTableViewCell.h; sourceTree = "<group>"; };
 		1FFB8E731B8BCA1B00042907 /* NewEntryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEntryTableViewCell.m; sourceTree = "<group>"; };
+		1FFB8E751B8BD1EF00042907 /* LabelAndSublabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelAndSublabelTableViewCell.h; sourceTree = "<group>"; };
+		1FFB8E761B8BD1EF00042907 /* LabelAndSublabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelAndSublabelTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 				1FFB8E701B8BC7BD00042907 /* MainScreenTableViewDataSource.m */,
 				1FFB8E721B8BCA1B00042907 /* NewEntryTableViewCell.h */,
 				1FFB8E731B8BCA1B00042907 /* NewEntryTableViewCell.m */,
+				1FFB8E751B8BD1EF00042907 /* LabelAndSublabelTableViewCell.h */,
+				1FFB8E761B8BD1EF00042907 /* LabelAndSublabelTableViewCell.m */,
 			);
 			name = "Main Screen";
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				1FFB8E691B8BC28B00042907 /* FAQTableViewDataSource.m in Sources */,
 				1FFB8E711B8BC7BD00042907 /* MainScreenTableViewDataSource.m in Sources */,
 				1FFB8E6B1B8BC28B00042907 /* FAQViewController.m in Sources */,
+				1FFB8E771B8BD1EF00042907 /* LabelAndSublabelTableViewCell.m in Sources */,
 				1FFB8E381B8BBCD000042907 /* AppDelegate.m in Sources */,
 				1FFB8E6A1B8BC28B00042907 /* FAQDetailViewController.m in Sources */,
 				1FFB8E6C1B8BC28B00042907 /* FAQs.m in Sources */,

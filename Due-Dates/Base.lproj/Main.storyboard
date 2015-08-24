@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newEntry" id="NbK-iO-KZ9" customClass="NewEntryTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newEntry" rowHeight="50" id="NbK-iO-KZ9" customClass="NewEntryTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NbK-iO-KZ9" id="cVt-E4-EkE">
@@ -31,7 +31,7 @@
                                             <segue destination="UfH-59-tyc" kind="show" id="SEo-dY-9Gu"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="viewStatistics" id="J7K-Hj-Z64">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="viewStatistics" rowHeight="50" id="J7K-Hj-Z64">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J7K-Hj-Z64" id="ici-jh-BVI">
@@ -41,13 +41,41 @@
                                             <segue destination="BGk-F2-pEr" kind="show" id="ltQ-0f-VzO"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="viewEntry" id="Xbt-Ep-RMh">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="viewEntry" rowHeight="50" id="Xbt-Ep-RMh" customClass="LabelAndSublabelTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xbt-Ep-RMh" id="NQD-Mk-374">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbX-iK-Vnr">
+                                                    <rect key="frame" x="8" y="8" width="584" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brC-PO-KTg">
+                                                    <rect key="frame" x="8" y="28" width="584" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="kvI-r8-0zy"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PbX-iK-Vnr" firstAttribute="top" secondItem="NQD-Mk-374" secondAttribute="topMargin" id="B5g-Sr-Xsp"/>
+                                                <constraint firstItem="brC-PO-KTg" firstAttribute="trailing" secondItem="NQD-Mk-374" secondAttribute="trailingMargin" id="KEw-8R-jKy"/>
+                                                <constraint firstItem="PbX-iK-Vnr" firstAttribute="trailing" secondItem="NQD-Mk-374" secondAttribute="trailingMargin" id="U9Y-Ri-vWB"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="brC-PO-KTg" secondAttribute="bottom" constant="-8" id="Yy5-3W-y5g"/>
+                                                <constraint firstItem="brC-PO-KTg" firstAttribute="leading" secondItem="NQD-Mk-374" secondAttribute="leadingMargin" id="eNP-Fd-xjF"/>
+                                                <constraint firstItem="brC-PO-KTg" firstAttribute="top" secondItem="PbX-iK-Vnr" secondAttribute="bottom" constant="-1" id="p7A-yb-uYt"/>
+                                                <constraint firstItem="PbX-iK-Vnr" firstAttribute="leading" secondItem="NQD-Mk-374" secondAttribute="leadingMargin" id="rtE-xe-1Q2"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="entryTypeLabel" destination="PbX-iK-Vnr" id="rp8-kN-baP"/>
+                                            <outlet property="numberOfEntriesLabel" destination="brC-PO-KTg" id="rlU-fX-UZn"/>
                                             <segue destination="JOe-NM-0XB" kind="show" id="tJS-Pm-MhR"/>
                                         </connections>
                                     </tableViewCell>

@@ -10,7 +10,7 @@
 		1FFB8E351B8BBCD000042907 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E341B8BBCD000042907 /* main.m */; };
 		1FFB8E381B8BBCD000042907 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E371B8BBCD000042907 /* AppDelegate.m */; };
 		1FFB8E3B1B8BBCD000042907 /* Due_Dates.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E391B8BBCD000042907 /* Due_Dates.xcdatamodeld */; };
-		1FFB8E3E1B8BBCD000042907 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E3D1B8BBCD000042907 /* ViewController.m */; };
+		1FFB8E3E1B8BBCD000042907 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E3D1B8BBCD000042907 /* MainScreenViewController.m */; };
 		1FFB8E411B8BBCD000042907 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFB8E3F1B8BBCD000042907 /* Main.storyboard */; };
 		1FFB8E431B8BBCD000042907 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FFB8E421B8BBCD000042907 /* Images.xcassets */; };
 		1FFB8E461B8BBCD100042907 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FFB8E441B8BBCD100042907 /* LaunchScreen.xib */; };
@@ -19,6 +19,8 @@
 		1FFB8E6A1B8BC28B00042907 /* FAQDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E641B8BC28B00042907 /* FAQDetailViewController.m */; };
 		1FFB8E6B1B8BC28B00042907 /* FAQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E661B8BC28B00042907 /* FAQViewController.m */; };
 		1FFB8E6C1B8BC28B00042907 /* FAQs.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E681B8BC28B00042907 /* FAQs.m */; };
+		1FFB8E711B8BC7BD00042907 /* MainScreenTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E701B8BC7BD00042907 /* MainScreenTableViewDataSource.m */; };
+		1FFB8E741B8BCA1B00042907 /* NewEntryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E731B8BCA1B00042907 /* NewEntryTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +40,8 @@
 		1FFB8E361B8BBCD000042907 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1FFB8E371B8BBCD000042907 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1FFB8E3A1B8BBCD000042907 /* Due_Dates.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Due_Dates.xcdatamodel; sourceTree = "<group>"; };
-		1FFB8E3C1B8BBCD000042907 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1FFB8E3D1B8BBCD000042907 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1FFB8E3C1B8BBCD000042907 /* MainScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenViewController.h; sourceTree = "<group>"; };
+		1FFB8E3D1B8BBCD000042907 /* MainScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenViewController.m; sourceTree = "<group>"; };
 		1FFB8E401B8BBCD000042907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FFB8E421B8BBCD000042907 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1FFB8E451B8BBCD100042907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -54,6 +56,10 @@
 		1FFB8E661B8BC28B00042907 /* FAQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQViewController.m; sourceTree = "<group>"; };
 		1FFB8E671B8BC28B00042907 /* FAQs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQs.h; sourceTree = "<group>"; };
 		1FFB8E681B8BC28B00042907 /* FAQs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQs.m; sourceTree = "<group>"; };
+		1FFB8E6F1B8BC7BD00042907 /* MainScreenTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScreenTableViewDataSource.h; sourceTree = "<group>"; };
+		1FFB8E701B8BC7BD00042907 /* MainScreenTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScreenTableViewDataSource.m; sourceTree = "<group>"; };
+		1FFB8E721B8BCA1B00042907 /* NewEntryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewEntryTableViewCell.h; sourceTree = "<group>"; };
+		1FFB8E731B8BCA1B00042907 /* NewEntryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEntryTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,7 @@
 			children = (
 				1FFB8E361B8BBCD000042907 /* AppDelegate.h */,
 				1FFB8E371B8BBCD000042907 /* AppDelegate.m */,
-				1FFB8E3C1B8BBCD000042907 /* ViewController.h */,
-				1FFB8E3D1B8BBCD000042907 /* ViewController.m */,
+				1FFB8E6E1B8BC78400042907 /* Main Screen */,
 				1FFB8E6D1B8BC29900042907 /* FAQ's */,
 				1FFB8E3F1B8BBCD000042907 /* Main.storyboard */,
 				1FFB8E421B8BBCD000042907 /* Images.xcassets */,
@@ -148,6 +153,19 @@
 				1FFB8E681B8BC28B00042907 /* FAQs.m */,
 			);
 			name = "FAQ's";
+			sourceTree = "<group>";
+		};
+		1FFB8E6E1B8BC78400042907 /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1FFB8E3C1B8BBCD000042907 /* MainScreenViewController.h */,
+				1FFB8E3D1B8BBCD000042907 /* MainScreenViewController.m */,
+				1FFB8E6F1B8BC7BD00042907 /* MainScreenTableViewDataSource.h */,
+				1FFB8E701B8BC7BD00042907 /* MainScreenTableViewDataSource.m */,
+				1FFB8E721B8BCA1B00042907 /* NewEntryTableViewCell.h */,
+				1FFB8E731B8BCA1B00042907 /* NewEntryTableViewCell.m */,
+			);
+			name = "Main Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,13 +269,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FFB8E691B8BC28B00042907 /* FAQTableViewDataSource.m in Sources */,
+				1FFB8E711B8BC7BD00042907 /* MainScreenTableViewDataSource.m in Sources */,
 				1FFB8E6B1B8BC28B00042907 /* FAQViewController.m in Sources */,
 				1FFB8E381B8BBCD000042907 /* AppDelegate.m in Sources */,
 				1FFB8E6A1B8BC28B00042907 /* FAQDetailViewController.m in Sources */,
 				1FFB8E6C1B8BC28B00042907 /* FAQs.m in Sources */,
 				1FFB8E3B1B8BBCD000042907 /* Due_Dates.xcdatamodeld in Sources */,
-				1FFB8E3E1B8BBCD000042907 /* ViewController.m in Sources */,
+				1FFB8E3E1B8BBCD000042907 /* MainScreenViewController.m in Sources */,
 				1FFB8E351B8BBCD000042907 /* main.m in Sources */,
+				1FFB8E741B8BCA1B00042907 /* NewEntryTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

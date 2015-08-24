@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NewEntryTableViewCell.h
 //  Due-Dates
 //
 //  Created by Zack Spicer on 8/24/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface NewEntryTableViewCell : UITableViewCell
 
 @end
-

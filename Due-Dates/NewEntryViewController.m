@@ -74,43 +74,43 @@ enum WorkType
         
         [alert addAction:defaultAction];
         [self presentViewController:alert animated:YES completion:nil];
-    }
-    
-    // Checking to see what is in the type text field
-    
-    // Homework
-    if ([self.typeTextField.text isEqualToString:@"Homework"])
-    {
-        [self performSegueWithIdentifier:@"homeworkEntry" sender:sender];
-    }else if ([self.typeTextField.text isEqualToString:@"Essays"])
-    {
-        [self performSegueWithIdentifier:@"essaysEntry" sender:sender];
-    }else if ([self.typeTextField.text isEqualToString:@"Projects"])
-    {
-        [self performSegueWithIdentifier:@"projectsEntry" sender:sender];
-    }else if ([self.typeTextField.text isEqualToString:@"Tests"])
-    {
-        [self performSegueWithIdentifier:@"testsEntry" sender:sender];
-    }else if ([self.typeTextField.text isEqualToString:@"Chores"])
-    {
-        [self performSegueWithIdentifier:@"choresEntry" sender:sender];
-    }else if ([self.typeTextField.text isEqualToString:@"Practice"])
-    {
-        [self performSegueWithIdentifier:@"practiceEntry" sender:sender];
-    }else if ([self.typeTextField.text isEqualToString:@"Other"])
-    {
-        [self performSegueWithIdentifier:@"otherEntry" sender:sender];
     }else
     {
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Enter a Valid Type"
-                                                                       message:@"You must enter a valid entry type to continue"
-                                                                preferredStyle:UIAlertControllerStyleAlert];
+        // Checking to see what is in the type text field
         
-        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                              handler:^(UIAlertAction * action) {}];
-        
-        [alert addAction:defaultAction];
-        [self presentViewController:alert animated:YES completion:nil];
+        if ([self.typeTextField.text isEqualToString:@"Homework"]) // Homework
+        {
+            [self performSegueWithIdentifier:@"homeworkEntry" sender:sender];
+        }else if ([self.typeTextField.text isEqualToString:@"Essays"]) // Essays
+        {
+            [self performSegueWithIdentifier:@"essaysEntry" sender:sender];
+        }else if ([self.typeTextField.text isEqualToString:@"Projects"]) // Projects
+        {
+            [self performSegueWithIdentifier:@"projectsEntry" sender:sender];
+        }else if ([self.typeTextField.text isEqualToString:@"Tests"]) // Tests
+        {
+            [self performSegueWithIdentifier:@"testsEntry" sender:sender];
+        }else if ([self.typeTextField.text isEqualToString:@"Chores"]) // Chores
+        {
+            [self performSegueWithIdentifier:@"choresEntry" sender:sender];
+        }else if ([self.typeTextField.text isEqualToString:@"Practice"]) // Practice
+        {
+            [self performSegueWithIdentifier:@"practiceEntry" sender:sender];
+        }else if ([self.typeTextField.text isEqualToString:@"Other"]) // Other
+        {
+            [self performSegueWithIdentifier:@"otherEntry" sender:sender];
+        }else // Something other then the seven listed above; shows an alert
+        {
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Enter a Valid Type"
+                                                                           message:@"You must enter a valid entry type to continue"
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                                  handler:^(UIAlertAction * action) {}];
+            
+            [alert addAction:defaultAction];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
     }
     
 }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1FFB8E351B8BBCD000042907 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E341B8BBCD000042907 /* main.m */; };
 		1FFB8E381B8BBCD000042907 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E371B8BBCD000042907 /* AppDelegate.m */; };
-		1FFB8E3B1B8BBCD000042907 /* Due_Dates.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E391B8BBCD000042907 /* Due_Dates.xcdatamodeld */; };
 		1FFB8E3E1B8BBCD000042907 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E3D1B8BBCD000042907 /* MainScreenViewController.m */; };
 		1FFB8E411B8BBCD000042907 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFB8E3F1B8BBCD000042907 /* Main.storyboard */; };
 		1FFB8E431B8BBCD000042907 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FFB8E421B8BBCD000042907 /* Images.xcassets */; };
@@ -22,6 +21,7 @@
 		1FFB8E711B8BC7BD00042907 /* MainScreenTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E701B8BC7BD00042907 /* MainScreenTableViewDataSource.m */; };
 		1FFB8E741B8BCA1B00042907 /* NewEntryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E731B8BCA1B00042907 /* NewEntryTableViewCell.m */; };
 		1FFB8E771B8BD1EF00042907 /* LabelAndSublabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E761B8BD1EF00042907 /* LabelAndSublabelTableViewCell.m */; };
+		1FFB8E7B1B8BD5E800042907 /* NewEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E7A1B8BD5E800042907 /* NewEntryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,6 @@
 		1FFB8E341B8BBCD000042907 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1FFB8E361B8BBCD000042907 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1FFB8E371B8BBCD000042907 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1FFB8E3A1B8BBCD000042907 /* Due_Dates.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Due_Dates.xcdatamodel; sourceTree = "<group>"; };
 		1FFB8E3C1B8BBCD000042907 /* MainScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenViewController.h; sourceTree = "<group>"; };
 		1FFB8E3D1B8BBCD000042907 /* MainScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenViewController.m; sourceTree = "<group>"; };
 		1FFB8E401B8BBCD000042907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +62,8 @@
 		1FFB8E731B8BCA1B00042907 /* NewEntryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEntryTableViewCell.m; sourceTree = "<group>"; };
 		1FFB8E751B8BD1EF00042907 /* LabelAndSublabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelAndSublabelTableViewCell.h; sourceTree = "<group>"; };
 		1FFB8E761B8BD1EF00042907 /* LabelAndSublabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelAndSublabelTableViewCell.m; sourceTree = "<group>"; };
+		1FFB8E791B8BD5E800042907 /* NewEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewEntryViewController.h; sourceTree = "<group>"; };
+		1FFB8E7A1B8BD5E800042907 /* NewEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEntryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +107,12 @@
 			children = (
 				1FFB8E361B8BBCD000042907 /* AppDelegate.h */,
 				1FFB8E371B8BBCD000042907 /* AppDelegate.m */,
+				1FFB8E781B8BD5B300042907 /* New Entry View Controllers */,
 				1FFB8E6E1B8BC78400042907 /* Main Screen */,
 				1FFB8E6D1B8BC29900042907 /* FAQ's */,
 				1FFB8E3F1B8BBCD000042907 /* Main.storyboard */,
 				1FFB8E421B8BBCD000042907 /* Images.xcassets */,
 				1FFB8E441B8BBCD100042907 /* LaunchScreen.xib */,
-				1FFB8E391B8BBCD000042907 /* Due_Dates.xcdatamodeld */,
 				1FFB8E321B8BBCD000042907 /* Supporting Files */,
 			);
 			path = "Due-Dates";
@@ -171,6 +172,15 @@
 				1FFB8E761B8BD1EF00042907 /* LabelAndSublabelTableViewCell.m */,
 			);
 			name = "Main Screen";
+			sourceTree = "<group>";
+		};
+		1FFB8E781B8BD5B300042907 /* New Entry View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1FFB8E791B8BD5E800042907 /* NewEntryViewController.h */,
+				1FFB8E7A1B8BD5E800042907 /* NewEntryViewController.m */,
+			);
+			name = "New Entry View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,12 +285,12 @@
 			files = (
 				1FFB8E691B8BC28B00042907 /* FAQTableViewDataSource.m in Sources */,
 				1FFB8E711B8BC7BD00042907 /* MainScreenTableViewDataSource.m in Sources */,
+				1FFB8E7B1B8BD5E800042907 /* NewEntryViewController.m in Sources */,
 				1FFB8E6B1B8BC28B00042907 /* FAQViewController.m in Sources */,
 				1FFB8E771B8BD1EF00042907 /* LabelAndSublabelTableViewCell.m in Sources */,
 				1FFB8E381B8BBCD000042907 /* AppDelegate.m in Sources */,
 				1FFB8E6A1B8BC28B00042907 /* FAQDetailViewController.m in Sources */,
 				1FFB8E6C1B8BC28B00042907 /* FAQs.m in Sources */,
-				1FFB8E3B1B8BBCD000042907 /* Due_Dates.xcdatamodeld in Sources */,
 				1FFB8E3E1B8BBCD000042907 /* MainScreenViewController.m in Sources */,
 				1FFB8E351B8BBCD000042907 /* main.m in Sources */,
 				1FFB8E741B8BCA1B00042907 /* NewEntryTableViewCell.m in Sources */,
@@ -490,19 +500,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		1FFB8E391B8BBCD000042907 /* Due_Dates.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				1FFB8E3A1B8BBCD000042907 /* Due_Dates.xcdatamodel */,
-			);
-			currentVersion = 1FFB8E3A1B8BBCD000042907 /* Due_Dates.xcdatamodel */;
-			path = Due_Dates.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 1FFB8E271B8BBCD000042907 /* Project object */;
 }

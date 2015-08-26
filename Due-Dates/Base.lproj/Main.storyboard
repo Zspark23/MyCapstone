@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Main Screen View Controller-->
@@ -460,7 +461,7 @@
         <!--Tests-->
         <scene sceneID="cQg-iC-ZS7">
             <objects>
-                <viewController id="CVu-32-qsc" sceneMemberID="viewController">
+                <viewController id="CVu-32-qsc" customClass="TestsEntryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bfm-73-SHj"/>
                         <viewControllerLayoutGuide type="bottom" id="ei5-mh-XwF"/>
@@ -468,9 +469,96 @@
                     <view key="view" contentMode="scaleToFill" id="V2n-Mf-APj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List of Chapters/Sections to Study" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cur-d7-jJV">
+                                <rect key="frame" x="128" y="72" width="345" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="345" id="bgo-yL-5nV"/>
+                                    <constraint firstAttribute="height" constant="28" id="und-dx-BjD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIP-N8-esf">
+                                <rect key="frame" x="269" y="550" width="62" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Rru-Q5-5ch"/>
+                                    <constraint firstAttribute="width" constant="62" id="sjv-0n-pvn"/>
+                                </constraints>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="CVu-32-qsc" eventType="touchUpInside" id="qj6-LM-Obl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTt-bi-MsF">
+                                <rect key="frame" x="16" y="108" width="280" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="SU4-xx-gE8">
+                                <rect key="frame" x="16" y="146" width="568" height="396"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhS-5r-MSl">
+                                <rect key="frame" x="304" y="108" width="280" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="BIP-N8-esf" secondAttribute="centerX" id="0he-vy-p6F"/>
+                            <constraint firstItem="GhS-5r-MSl" firstAttribute="leading" secondItem="lTt-bi-MsF" secondAttribute="trailing" constant="8" id="3Ji-ZF-hcr"/>
+                            <constraint firstAttribute="width" secondItem="lTt-bi-MsF" secondAttribute="width" multiplier="2" constant="40" id="4cb-2M-oDd"/>
+                            <constraint firstItem="BIP-N8-esf" firstAttribute="top" secondItem="SU4-xx-gE8" secondAttribute="bottom" constant="8" id="95O-KM-Xy1"/>
+                            <constraint firstItem="lTt-bi-MsF" firstAttribute="top" secondItem="Cur-d7-jJV" secondAttribute="bottom" constant="8" id="BSO-DV-0B4"/>
+                            <constraint firstItem="GhS-5r-MSl" firstAttribute="trailing" secondItem="V2n-Mf-APj" secondAttribute="trailingMargin" id="Pdg-1N-RbT"/>
+                            <constraint firstAttribute="centerX" secondItem="Cur-d7-jJV" secondAttribute="centerX" constant="-0.5" id="Q7d-lh-KTp"/>
+                            <constraint firstItem="Cur-d7-jJV" firstAttribute="top" secondItem="bfm-73-SHj" secondAttribute="bottom" constant="8" id="QuW-55-OgW"/>
+                            <constraint firstItem="SU4-xx-gE8" firstAttribute="top" secondItem="lTt-bi-MsF" secondAttribute="bottom" constant="8" id="T6K-jx-dxt"/>
+                            <constraint firstItem="GhS-5r-MSl" firstAttribute="top" secondItem="Cur-d7-jJV" secondAttribute="bottom" constant="8" id="dg0-2X-83i"/>
+                            <constraint firstItem="SU4-xx-gE8" firstAttribute="trailing" secondItem="V2n-Mf-APj" secondAttribute="trailingMargin" id="lqc-5G-Yv5"/>
+                            <constraint firstItem="ei5-mh-XwF" firstAttribute="top" secondItem="BIP-N8-esf" secondAttribute="bottom" constant="20" id="pts-ix-BPj"/>
+                            <constraint firstItem="SU4-xx-gE8" firstAttribute="leading" secondItem="V2n-Mf-APj" secondAttribute="leadingMargin" id="rEZ-mB-iu9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BIP-N8-esf" secondAttribute="trailing" constant="253" id="s6t-Cv-btB"/>
+                            <constraint firstItem="lTt-bi-MsF" firstAttribute="leading" secondItem="V2n-Mf-APj" secondAttribute="leadingMargin" id="uYV-2R-A0j"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="s6t-Cv-btB"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Tests" id="MNb-WC-AbX"/>
+                    <connections>
+                        <outlet property="tableView" destination="SU4-xx-gE8" id="JtS-LD-ssI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QIC-5w-CKU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

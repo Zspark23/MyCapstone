@@ -11,6 +11,7 @@
 		1F2CBF611B8D155A00F23B59 /* EssaysEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF601B8D155A00F23B59 /* EssaysEntryViewController.m */; };
 		1F2CBF641B8D15C900F23B59 /* EssayWorkDivideTypeTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF631B8D15C900F23B59 /* EssayWorkDivideTypeTableViewDataSource.m */; };
 		1F2CBF671B8D393500F23B59 /* ProjectEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF661B8D393500F23B59 /* ProjectEntryViewController.m */; };
+		1F2CBF6A1B8E13D600F23B59 /* TestsEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF691B8E13D600F23B59 /* TestsEntryViewController.m */; };
 		1FFB8E351B8BBCD000042907 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E341B8BBCD000042907 /* main.m */; };
 		1FFB8E381B8BBCD000042907 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E371B8BBCD000042907 /* AppDelegate.m */; };
 		1FFB8E3E1B8BBCD000042907 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E3D1B8BBCD000042907 /* MainScreenViewController.m */; };
@@ -47,6 +48,8 @@
 		1F2CBF631B8D15C900F23B59 /* EssayWorkDivideTypeTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EssayWorkDivideTypeTableViewDataSource.m; sourceTree = "<group>"; };
 		1F2CBF651B8D393500F23B59 /* ProjectEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProjectEntryViewController.h; path = ../ProjectEntryViewController.h; sourceTree = "<group>"; };
 		1F2CBF661B8D393500F23B59 /* ProjectEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProjectEntryViewController.m; path = ../ProjectEntryViewController.m; sourceTree = "<group>"; };
+		1F2CBF681B8E13D600F23B59 /* TestsEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestsEntryViewController.h; sourceTree = "<group>"; };
+		1F2CBF691B8E13D600F23B59 /* TestsEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestsEntryViewController.m; sourceTree = "<group>"; };
 		1FFB8E2F1B8BBCD000042907 /* Due-Dates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Due-Dates.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFB8E331B8BBCD000042907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FFB8E341B8BBCD000042907 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 		1F2CBF581B8D0E1200F23B59 /* Tests Entry View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1F2CBF681B8E13D600F23B59 /* TestsEntryViewController.h */,
+				1F2CBF691B8E13D600F23B59 /* TestsEntryViewController.m */,
 			);
 			name = "Tests Entry View Controller";
 			sourceTree = "<group>";
@@ -368,6 +373,7 @@
 				1F2CBF5E1B8D0EA600F23B59 /* HomeworkEntryViewController.m in Sources */,
 				1FFB8E381B8BBCD000042907 /* AppDelegate.m in Sources */,
 				1FFB8E6A1B8BC28B00042907 /* FAQDetailViewController.m in Sources */,
+				1F2CBF6A1B8E13D600F23B59 /* TestsEntryViewController.m in Sources */,
 				1FFB8E6C1B8BC28B00042907 /* FAQs.m in Sources */,
 				1F2CBF641B8D15C900F23B59 /* EssayWorkDivideTypeTableViewDataSource.m in Sources */,
 				1FFB8E3E1B8BBCD000042907 /* MainScreenViewController.m in Sources */,

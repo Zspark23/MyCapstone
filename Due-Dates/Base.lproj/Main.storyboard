@@ -586,7 +586,7 @@
         <!--Chores-->
         <scene sceneID="3Lp-cQ-8Xp">
             <objects>
-                <viewController id="OgV-VW-EiG" sceneMemberID="viewController">
+                <viewController id="OgV-VW-EiG" customClass="ChoresEntryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="THr-e8-j51"/>
                         <viewControllerLayoutGuide type="bottom" id="wnH-HA-kau"/>
@@ -594,9 +594,92 @@
                     <view key="view" contentMode="scaleToFill" id="aiG-vI-Kql">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Chores Weighted Based on Expected Time to Complete. Put the Expected Time it Will Take to Complete Each Chores" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeY-h1-Yex">
+                                <rect key="frame" x="16" y="72" width="568" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="P9S-gf-4JB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BD-kr-PR7">
+                                <rect key="frame" x="16" y="145" width="280" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSZ-3B-Evi">
+                                <rect key="frame" x="304" y="145" width="280" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="6A3-LL-yjS">
+                                <rect key="frame" x="16" y="183" width="568" height="359"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pq8-Fm-Jn4">
+                                <rect key="frame" x="269" y="550" width="62" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="0qo-wI-KLj"/>
+                                    <constraint firstAttribute="height" constant="30" id="Ma8-AY-LO5"/>
+                                </constraints>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="OgV-VW-EiG" eventType="touchUpInside" id="eh3-Xm-CeG"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6A3-LL-yjS" firstAttribute="top" secondItem="bSZ-3B-Evi" secondAttribute="bottom" constant="8" id="5Ie-vW-ZUG"/>
+                            <constraint firstItem="6A3-LL-yjS" firstAttribute="trailing" secondItem="aiG-vI-Kql" secondAttribute="trailingMargin" id="77Z-wh-lvV"/>
+                            <constraint firstItem="GeY-h1-Yex" firstAttribute="top" secondItem="THr-e8-j51" secondAttribute="bottom" constant="8" id="8ku-wf-sNI"/>
+                            <constraint firstItem="GeY-h1-Yex" firstAttribute="trailing" secondItem="aiG-vI-Kql" secondAttribute="trailingMargin" id="B6x-eF-nS1"/>
+                            <constraint firstItem="7BD-kr-PR7" firstAttribute="width" secondItem="bSZ-3B-Evi" secondAttribute="width" id="FDl-Ir-Zhd"/>
+                            <constraint firstAttribute="centerX" secondItem="GeY-h1-Yex" secondAttribute="centerX" id="HeA-fk-RL8"/>
+                            <constraint firstAttribute="centerX" secondItem="pq8-Fm-Jn4" secondAttribute="centerX" id="Itz-T1-gKl"/>
+                            <constraint firstItem="pq8-Fm-Jn4" firstAttribute="top" secondItem="6A3-LL-yjS" secondAttribute="bottom" constant="8" id="Myn-nN-QHr"/>
+                            <constraint firstItem="6A3-LL-yjS" firstAttribute="top" secondItem="7BD-kr-PR7" secondAttribute="bottom" constant="8" id="Owl-1h-Yh2"/>
+                            <constraint firstItem="bSZ-3B-Evi" firstAttribute="trailing" secondItem="aiG-vI-Kql" secondAttribute="trailingMargin" id="YGU-u1-Re4"/>
+                            <constraint firstItem="7BD-kr-PR7" firstAttribute="leading" secondItem="aiG-vI-Kql" secondAttribute="leadingMargin" id="Z7I-7q-fqt"/>
+                            <constraint firstItem="GeY-h1-Yex" firstAttribute="leading" secondItem="aiG-vI-Kql" secondAttribute="leadingMargin" id="ZnW-Ms-fJi"/>
+                            <constraint firstItem="7BD-kr-PR7" firstAttribute="top" secondItem="GeY-h1-Yex" secondAttribute="bottom" constant="8" id="hOW-ki-27n"/>
+                            <constraint firstItem="bSZ-3B-Evi" firstAttribute="top" secondItem="GeY-h1-Yex" secondAttribute="bottom" constant="8" id="lHc-LZ-Abd"/>
+                            <constraint firstItem="6A3-LL-yjS" firstAttribute="leading" secondItem="aiG-vI-Kql" secondAttribute="leadingMargin" id="lvp-aa-4cA"/>
+                            <constraint firstItem="bSZ-3B-Evi" firstAttribute="leading" secondItem="7BD-kr-PR7" secondAttribute="trailing" constant="8" id="tir-Rk-Y8r"/>
+                            <constraint firstItem="wnH-HA-kau" firstAttribute="top" secondItem="pq8-Fm-Jn4" secondAttribute="bottom" constant="20" id="tva-ad-EeC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chores" id="olI-Qn-xxt"/>
+                    <connections>
+                        <outlet property="tableView" destination="6A3-LL-yjS" id="pQA-PS-tai"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Vs-Sy-mGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

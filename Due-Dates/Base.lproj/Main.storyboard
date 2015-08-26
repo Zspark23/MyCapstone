@@ -360,7 +360,7 @@
         <!--Projects-->
         <scene sceneID="iPN-yS-Ysm">
             <objects>
-                <viewController id="a6D-wy-JTV" sceneMemberID="viewController">
+                <viewController id="a6D-wy-JTV" customClass="ProjectEntryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mOY-y9-uvC"/>
                         <viewControllerLayoutGuide type="bottom" id="YJU-Rh-TtZ"/>
@@ -368,9 +368,90 @@
                     <view key="view" contentMode="scaleToFill" id="4Zo-Ze-DSm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LM6-kH-zap">
+                                <rect key="frame" x="16" y="106" width="280" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhR-YG-eft">
+                                <rect key="frame" x="304" y="106" width="280" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hbc-0C-qKS">
+                                <rect key="frame" x="16" y="144" width="568" height="398"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F45-Ew-7NT">
+                                <rect key="frame" x="269" y="550" width="62" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="P2L-gZ-Mzn"/>
+                                    <constraint firstAttribute="width" constant="62" id="aed-Su-uVF"/>
+                                </constraints>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="a6D-wy-JTV" eventType="touchUpInside" id="W7l-wz-AMM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project To-Do List" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXg-pl-TlY">
+                                <rect key="frame" x="208" y="72" width="184" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="4gD-Uh-J3Z"/>
+                                    <constraint firstAttribute="width" constant="184" id="5mb-PE-bMs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BhR-YG-eft" firstAttribute="top" secondItem="aXg-pl-TlY" secondAttribute="bottom" constant="8" id="Cxb-Kb-Qnw"/>
+                            <constraint firstAttribute="centerX" secondItem="F45-Ew-7NT" secondAttribute="centerX" id="Jwx-N1-d7G"/>
+                            <constraint firstItem="Hbc-0C-qKS" firstAttribute="leading" secondItem="4Zo-Ze-DSm" secondAttribute="leadingMargin" id="LrC-cl-kLy"/>
+                            <constraint firstItem="Hbc-0C-qKS" firstAttribute="trailing" secondItem="4Zo-Ze-DSm" secondAttribute="trailingMargin" id="QBA-44-tIc"/>
+                            <constraint firstItem="LM6-kH-zap" firstAttribute="leading" secondItem="4Zo-Ze-DSm" secondAttribute="leadingMargin" id="R1g-Y5-fGM"/>
+                            <constraint firstItem="YJU-Rh-TtZ" firstAttribute="top" secondItem="F45-Ew-7NT" secondAttribute="bottom" constant="20" id="Vrn-2j-uIp"/>
+                            <constraint firstItem="Hbc-0C-qKS" firstAttribute="top" secondItem="BhR-YG-eft" secondAttribute="bottom" constant="8" id="dOx-B6-hQD"/>
+                            <constraint firstAttribute="centerX" secondItem="aXg-pl-TlY" secondAttribute="centerX" id="lUL-AH-0mM"/>
+                            <constraint firstItem="BhR-YG-eft" firstAttribute="leading" secondItem="LM6-kH-zap" secondAttribute="trailing" constant="8" id="mLe-bo-aeD"/>
+                            <constraint firstItem="aXg-pl-TlY" firstAttribute="top" secondItem="mOY-y9-uvC" secondAttribute="bottom" constant="8" id="mP5-tn-ii7"/>
+                            <constraint firstItem="LM6-kH-zap" firstAttribute="top" secondItem="mOY-y9-uvC" secondAttribute="bottom" constant="42" id="ozx-Jp-9mS"/>
+                            <constraint firstItem="BhR-YG-eft" firstAttribute="trailing" secondItem="4Zo-Ze-DSm" secondAttribute="trailingMargin" id="pdF-3d-5k4"/>
+                            <constraint firstItem="F45-Ew-7NT" firstAttribute="top" secondItem="Hbc-0C-qKS" secondAttribute="bottom" constant="8" id="sr6-ef-BNT"/>
+                            <constraint firstItem="BhR-YG-eft" firstAttribute="width" secondItem="LM6-kH-zap" secondAttribute="width" id="yjG-bc-OnR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Projects" id="MBc-18-abh"/>
+                    <connections>
+                        <outlet property="tableView" destination="Hbc-0C-qKS" id="Uns-gP-G2a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yj5-dk-h8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

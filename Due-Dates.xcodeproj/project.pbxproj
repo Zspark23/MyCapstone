@@ -13,6 +13,7 @@
 		1F2CBF671B8D393500F23B59 /* ProjectEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF661B8D393500F23B59 /* ProjectEntryViewController.m */; };
 		1F2CBF6A1B8E13D600F23B59 /* TestsEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF691B8E13D600F23B59 /* TestsEntryViewController.m */; };
 		1F2CBF6D1B8E190400F23B59 /* ChoresEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF6C1B8E190400F23B59 /* ChoresEntryViewController.m */; };
+		1F2CBF701B8E3E4F00F23B59 /* PracticeEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF6F1B8E3E4F00F23B59 /* PracticeEntryViewController.m */; };
 		1FFB8E351B8BBCD000042907 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E341B8BBCD000042907 /* main.m */; };
 		1FFB8E381B8BBCD000042907 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E371B8BBCD000042907 /* AppDelegate.m */; };
 		1FFB8E3E1B8BBCD000042907 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E3D1B8BBCD000042907 /* MainScreenViewController.m */; };
@@ -53,6 +54,8 @@
 		1F2CBF691B8E13D600F23B59 /* TestsEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestsEntryViewController.m; sourceTree = "<group>"; };
 		1F2CBF6B1B8E190400F23B59 /* ChoresEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoresEntryViewController.h; sourceTree = "<group>"; };
 		1F2CBF6C1B8E190400F23B59 /* ChoresEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoresEntryViewController.m; sourceTree = "<group>"; };
+		1F2CBF6E1B8E3E4F00F23B59 /* PracticeEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeEntryViewController.h; sourceTree = "<group>"; };
+		1F2CBF6F1B8E3E4F00F23B59 /* PracticeEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeEntryViewController.m; sourceTree = "<group>"; };
 		1FFB8E2F1B8BBCD000042907 /* Due-Dates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Due-Dates.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFB8E331B8BBCD000042907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FFB8E341B8BBCD000042907 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 		1F2CBF5A1B8D0E3000F23B59 /* Practice Entry View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1F2CBF6E1B8E3E4F00F23B59 /* PracticeEntryViewController.h */,
+				1F2CBF6F1B8E3E4F00F23B59 /* PracticeEntryViewController.m */,
 			);
 			name = "Practice Entry View Controller";
 			sourceTree = "<group>";
@@ -377,6 +382,7 @@
 				1FFB8E6B1B8BC28B00042907 /* FAQViewController.m in Sources */,
 				1FFB8E771B8BD1EF00042907 /* LabelAndSublabelTableViewCell.m in Sources */,
 				1F2CBF5E1B8D0EA600F23B59 /* HomeworkEntryViewController.m in Sources */,
+				1F2CBF701B8E3E4F00F23B59 /* PracticeEntryViewController.m in Sources */,
 				1FFB8E381B8BBCD000042907 /* AppDelegate.m in Sources */,
 				1FFB8E6A1B8BC28B00042907 /* FAQDetailViewController.m in Sources */,
 				1F2CBF6A1B8E13D600F23B59 /* TestsEntryViewController.m in Sources */,

@@ -93,9 +93,30 @@ enum WorkType
         }else if ([self.typeTextField.text isEqualToString:@"Chores"]) // Chores
         {
             [self performSegueWithIdentifier:@"choresEntry" sender:sender];
-        }else if ([self.typeTextField.text isEqualToString:@"Practice"]) // Practice
+        }else if ([self.typeTextField.text isEqualToString:@"Practice"] && [self.workDivideTextField.text isEqualToString:@"Hourly"])
+            // Practice Hourly
         {
-            [self performSegueWithIdentifier:@"practiceEntry" sender:sender];
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Select Another Work Divide"
+                                                                           message:@"It's not possible to divide practice hourly"
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                                  handler:^(UIAlertAction * action) {}];
+            
+            [alert addAction:defaultAction];
+            [self presentViewController:alert animated:YES completion:nil];
+        }else if ([self.typeTextField.text isEqualToString:@"Practice"] && [self.workDivideTextField.text isEqualToString:@"Daily"])
+            // Practice Daily
+        {
+            [self performSegueWithIdentifier:@"practiceDailyEntry" sender:sender];
+        }else if ([self.typeTextField.text isEqualToString:@"Practice"] && [self.workDivideTextField.text isEqualToString:@"Weekly"])
+            // Practice Weekly
+        {
+            [self performSegueWithIdentifier:@"practiceWeeklyEntry" sender:sender];
+        }else if ([self.typeTextField.text isEqualToString:@"Practice"] && [self.workDivideTextField.text isEqualToString:@"Monthly"])
+            // Practice Montly
+        {
+            [self performSegueWithIdentifier:@"practiceMonthlyEntry" sender:sender];
         }else if ([self.typeTextField.text isEqualToString:@"Other"]) // Other
         {
             [self performSegueWithIdentifier:@"otherEntry" sender:sender];

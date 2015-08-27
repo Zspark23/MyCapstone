@@ -26,6 +26,10 @@ enum WorkType
 @property (strong, nonatomic) IBOutlet UITextField *typeTextField;
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (strong, nonatomic) IBOutlet UITextField *workDivideTextField;
+@property (strong, nonatomic) IBOutlet UIView *workTypePickerView;
+@property (strong, nonatomic) IBOutlet UIView *workDividePickerView;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *bottomLayoutConstraint;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *otherBottomLayoutConstraint;
 
 @end
 
@@ -34,6 +38,11 @@ enum WorkType
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.datePicker.minimumDate = [NSDate date];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(workTypeEditingDidEnd:)];
+    [self.view addGestureRecognizer:tap];
 }
 
 #pragma mark - Submit Button Tapped Method
@@ -76,6 +85,9 @@ enum WorkType
         [self presentViewController:alert animated:YES completion:nil];
     }else
     {
+        // Setting text field text to entry properties
+
+        
         // Checking to see what is in the type text field
         
         if ([self.typeTextField.text isEqualToString:@"Homework"]) // Homework
@@ -93,7 +105,7 @@ enum WorkType
         }else if ([self.typeTextField.text isEqualToString:@"Chores"]) // Chores
         {
             [self performSegueWithIdentifier:@"choresEntry" sender:sender];
-        }else if ([self.typeTextField.text isEqualToString:@"Practice"] && [self.workDivideTextField.text isEqualToString:@"Hourly"])
+        }else if ([self.typeTextField.text isEqualToString:@"Practice/Exercise"] && [self.workDivideTextField.text isEqualToString:@"Hourly"])
             // Practice Hourly
         {
             UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Select Another Work Divide"
@@ -105,15 +117,15 @@ enum WorkType
             
             [alert addAction:defaultAction];
             [self presentViewController:alert animated:YES completion:nil];
-        }else if ([self.typeTextField.text isEqualToString:@"Practice"] && [self.workDivideTextField.text isEqualToString:@"Daily"])
+        }else if ([self.typeTextField.text isEqualToString:@"Practice/Exercise"] && [self.workDivideTextField.text isEqualToString:@"Daily"])
             // Practice Daily
         {
             [self performSegueWithIdentifier:@"practiceDailyEntry" sender:sender];
-        }else if ([self.typeTextField.text isEqualToString:@"Practice"] && [self.workDivideTextField.text isEqualToString:@"Weekly"])
+        }else if ([self.typeTextField.text isEqualToString:@"Practice/Exercise"] && [self.workDivideTextField.text isEqualToString:@"Weekly"])
             // Practice Weekly
         {
             [self performSegueWithIdentifier:@"practiceWeeklyEntry" sender:sender];
-        }else if ([self.typeTextField.text isEqualToString:@"Practice"] && [self.workDivideTextField.text isEqualToString:@"Monthly"])
+        }else if ([self.typeTextField.text isEqualToString:@"Practice/Exercise"] && [self.workDivideTextField.text isEqualToString:@"Monthly"])
             // Practice Montly
         {
             [self performSegueWithIdentifier:@"practiceMonthlyEntry" sender:sender];
@@ -135,5 +147,136 @@ enum WorkType
     }
     
 }
+
+#pragma mark - Work Type Text Field Methods
+
+- (IBAction)workTypeEditingDidBegin:(id)sender
+{
+    [sender resignFirstResponder];
+    
+    CABasicAnimation *animation = [CABasicAnimation animation];
+    animation.keyPath = @"position.y";
+    animation.fromValue = @(self.workTypePickerView.center.y);
+    animation.toValue = @(self.workTypePickerView.center.y - 285);
+    animation.duration = .5;
+    
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    
+    [self.workTypePickerView.layer addAnimation:animation forKey:@"basic"];
+    
+    self.workTypePickerView.layer.position = CGPointMake(self.workTypePickerView.layer.position.x, self.workTypePickerView.layer.position.y - 285);
+    self.bottomLayoutConstraint.constant = -285;
+
+}
+
+- (IBAction)workTypeEditingDidEnd:(id)sender
+{
+    CABasicAnimation *animation = [CABasicAnimation animation];
+    animation.keyPath = @"position.y";
+    animation.fromValue = @(self.workTypePickerView.center.y);
+    animation.toValue = @(self.workTypePickerView.center.y + 285);
+    animation.duration = .5;
+    
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    
+    [self.workTypePickerView.layer addAnimation:animation forKey:@"basic"];
+    
+    self.workTypePickerView.layer.position = CGPointMake(self.workTypePickerView.layer.position.x, self.workTypePickerView.layer.position.y + 285);
+    self.bottomLayoutConstraint.constant = 0;
+}
+
+- (IBAction)cancelButtonTapped:(UIBarButtonItem *)sender
+{
+    [self workTypeEditingDidEnd:self.typeTextField];
+}
+
+- (IBAction)doneButtonTapped:(id)sender
+{
+    [self workTypeEditingDidEnd:self.typeTextField];
+}
+
+#pragma mark - Work Divide Text Field Methods
+
+- (IBAction)editingDidBegin:(id)sender
+{
+    [sender resignFirstResponder];
+    
+    CABasicAnimation *animation = [CABasicAnimation animation];
+    animation.keyPath = @"position.y";
+    animation.fromValue = @(self.workDividePickerView.center.y);
+    animation.toValue = @(self.workDividePickerView.center.y - 285);
+    animation.duration = .5;
+    
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    
+    [self.workDividePickerView.layer addAnimation:animation forKey:@"basic"];
+    
+    self.workDividePickerView.layer.position = CGPointMake(self.workDividePickerView.layer.position.x, self.workDividePickerView.layer.position.y - 285);
+    self.otherBottomLayoutConstraint.constant = 0;
+    
+}
+
+- (IBAction)workDivideEditingDidEnd:(id)sender
+{
+    CABasicAnimation *animation = [CABasicAnimation animation];
+    animation.keyPath = @"position.y";
+    animation.fromValue = @(self.workDividePickerView.center.y);
+    animation.toValue = @(self.workDividePickerView.center.y + 285);
+    animation.duration = .5;
+    
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    
+    [self.workDividePickerView.layer addAnimation:animation forKey:@"basic"];
+    
+    self.workDividePickerView.layer.position = CGPointMake(self.workDividePickerView.layer.position.x, self.workDividePickerView.layer.position.y + 285);
+    self.otherBottomLayoutConstraint.constant = - 285;
+}
+- (IBAction)workDivideCancelButtonTapped:(UIBarButtonItem *)sender
+{
+    [self workDivideEditingDidEnd:self.workDivideTextField];
+}
+
+- (IBAction)workDivideDoneButtonTapped:(id)sender
+{
+    [self workDivideEditingDidEnd:self.workDivideTextField];
+}
+
+#pragma mark - Picker View Delegate Methods
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    if (pickerView.tag == 1)
+    {
+        return [self workTypeCategories][row];
+    }else if (pickerView.tag == 2)
+    {
+        return [self workDivideCategories][row];
+    }
+    return @"";
+    
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    if (pickerView.tag == 1)
+    {
+        self.typeTextField.text = [self workTypeCategories][row];
+    }else if (pickerView.tag == 2)
+    {
+        self.workDivideTextField.text = [self workDivideCategories][row];
+    }
+    
+}
+
+- (NSArray *)workTypeCategories
+{
+    return @[@"Homework", @"Essays", @"Projects", @"Tests", @"Chores", @"Practice/Exercise", @"Other"];
+}
+
+- (NSArray *)workDivideCategories
+{
+    return @[@"Hourly", @"Daily", @"Weekly", @"Monthly"];
+}
+
 
 @end

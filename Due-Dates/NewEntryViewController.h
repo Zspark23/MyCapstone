@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Entry.h"
 
-@interface NewEntryViewController : UIViewController <UITextFieldDelegate>
+@interface NewEntryViewController : UIViewController <UITextFieldDelegate, UIPickerViewDelegate>
+
+@property (nonatomic) Entry* entry;
 
 @end

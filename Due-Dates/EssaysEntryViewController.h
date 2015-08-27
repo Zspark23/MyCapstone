@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Entry.h"
 
 @interface EssaysEntryViewController : UIViewController <UITableViewDelegate>
+
+@property (nonatomic) Entry *entry;
 
 @end

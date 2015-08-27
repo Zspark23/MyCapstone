@@ -16,6 +16,8 @@
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * type;
 @property (nonatomic, retain) NSString * workDivideType;
+@property (nonatomic, retain) NSNumber * homeworkQuestionsAmount;
+@property (nonatomic, retain) NSDate * dueDate;
 @property (nonatomic, retain) NSSet *tasks;
 @end
 

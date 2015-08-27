@@ -9,6 +9,7 @@
 #import "MainScreenTableViewDataSource.h"
 #import "NewEntryTableViewCell.h"
 #import "LabelAndSublabelTableViewCell.h"
+#import "EntryController.h"
 
 enum MainScreenTableViewRowName
 {
@@ -45,34 +46,76 @@ enum MainScreenTableViewRowName
         
         switch (indexPath.row)
         {
-            case MainScreenTableViewRowNameHomework:
+            case MainScreenTableViewRowNameHomework: // Homework Row
                 cell.entryTypeLabel.text = @"Homework";
-                cell.numberOfEntriesLabel.text = @"2 Entries";
+                if ([[EntryController sharedInstance] homeworkEntries].count == 1) {
+                    cell.numberOfEntriesLabel.text = [NSString stringWithFormat:@"%lu Entry", (unsigned long)[[EntryController sharedInstance] homeworkEntries].count];
+                }else
+                {
+                    cell.numberOfEntriesLabel.text = [NSString stringWithFormat:@"%lu Entries", (unsigned long)[[EntryController sharedInstance] homeworkEntries].count];
+                }
                 break;
-            case MainScreenTableViewRowNameEssays:
+                
+            case MainScreenTableViewRowNameEssays: // Essays Row
                 cell.entryTypeLabel.text = @"Essays";
-                cell.numberOfEntriesLabel.text = @"1 Entry";
+                if ([[EntryController sharedInstance] essaysEntries].count == 1) {
+                    cell.numberOfEntriesLabel.text = [NSString stringWithFormat:@"%lu Entry", (unsigned long)[[EntryController sharedInstance] essaysEntries].count];
+                }else
+                {
+                    cell.numberOfEntriesLabel.text = [NSString stringWithFormat:@"%lu Entries", (unsigned long)[[EntryController sharedInstance] essaysEntries].count];
+                }
                 break;
-            case MainScreenTableViewRowNameProjects:
+                
+            case MainScreenTableViewRowNameProjects: // Projects Row
                 cell.entryTypeLabel.text = @"Projects";
-                cell.numberOfEntriesLabel.text = @"0 Entries";
+                if ([[EntryController sharedInstance] projectsEntries].count == 1) {
+                    cell.numberOfEntriesLabel.text = [NSString stringWithFormat:@"%lu Entry", (unsigned long)[[EntryController sharedInstance] projectsEntries].count];
+                }else
+                {
+                    cell.numberOfEntriesLabel.text = [NSString stringWithFormat:@"%lu Entries", (unsigned long)[[EntryController sharedInstance] projectsEntries].count];
+                }
                 break;
-            case MainScreenTableViewRowNameTests:
+                
+            case MainScreenTableViewRowNameTests: // Tests Row
                 cell.entryTypeLabel.text = @"Tests";
-                cell.numberOfEntriesLabel.text = @"1 Entry";
+                if ([[EntryController sharedInstance] testsEntries].count == 1) {
+                    cell.numberOfEntriesLabel.text = [NSString stringWithFormat:@"%lu Entry", (unsigned long)[[EntryController sharedInstance] testsEntries].count];
+                }else
+                {
+                    cell.numberOfEntriesLabel.text = [NSString stringWithFormat:@"%lu Entries", (unsigned long)[[EntryController sharedInstance] testsEntries].count];
+                }
                 break;
-            case MainScreenTableViewRowNameChores:
+                
+            case MainScreenTableViewRowNameChores: // Chores Row
                 cell.entryTypeLabel.text = @"Chores";
-                cell.numberOfEntriesLabel.text = @"0 Entries";
+                if ([[EntryController sharedInstance] choresEntries].count == 1) {
+                    cell.numberOfEntriesLabel.text = [NSString stringWithFormat:@"%lu Entry", (unsigned long)[[EntryController sharedInstance] choresEntries].count];
+                }else
+                {
+                    cell.numberOfEntriesLabel.text = [NSString stringWithFormat:@"%lu Entries", (unsigned long)[[EntryController sharedInstance] choresEntries].count];
+                }
                 break;
-            case MainScreenTableViewRowNamePractice:
-                cell.entryTypeLabel.text = @"Practice";
-                cell.numberOfEntriesLabel.text = @"4 Entries";
+                
+            case MainScreenTableViewRowNamePractice: // Practice/Exercise Row
+                cell.entryTypeLabel.text = @"Practice/Exercise";
+                if ([[EntryController sharedInstance] practiceEntries].count == 1) {
+                    cell.numberOfEntriesLabel.text = [NSString stringWithFormat:@"%lu Entry", (unsigned long)[[EntryController sharedInstance] practiceEntries].count];
+                }else
+                {
+                    cell.numberOfEntriesLabel.text = [NSString stringWithFormat:@"%lu Entries", (unsigned long)[[EntryController sharedInstance] practiceEntries].count];
+                }
                 break;
-            case MainScreenTableViewRowNameOther:
+                
+            case MainScreenTableViewRowNameOther: // Other Row
                 cell.entryTypeLabel.text = @"Other";
-                cell.numberOfEntriesLabel.text = @"0 Entries";
+                if ([[EntryController sharedInstance] otherEntries].count == 1) {
+                    cell.numberOfEntriesLabel.text = [NSString stringWithFormat:@"%lu Entry", (unsigned long)[[EntryController sharedInstance] otherEntries].count];
+                }else
+                {
+                    cell.numberOfEntriesLabel.text = [NSString stringWithFormat:@"%lu Entries", (unsigned long)[[EntryController sharedInstance] otherEntries].count];
+                }
                 break;
+                
             default:
                 break;
         }

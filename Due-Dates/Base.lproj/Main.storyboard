@@ -29,7 +29,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="UfH-59-tyc" kind="show" id="SEo-dY-9Gu"/>
+                                            <segue destination="UfH-59-tyc" kind="show" identifier="newEntry" id="3AL-Wl-5gk"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="viewStatistics" rowHeight="50" id="J7K-Hj-Z64">
@@ -114,7 +114,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <customObject id="S4F-HP-8ot" customClass="MainScreenTableViewDataSource"/>
             </objects>
-            <point key="canvasLocation" x="1192" y="313"/>
+            <point key="canvasLocation" x="1186" y="313"/>
         </scene>
         <!--Statistics-->
         <scene sceneID="Dsf-wU-hPE">
@@ -1151,6 +1151,7 @@
                     <navigationItem key="navigationItem" title="Essay/Paper" id="3xe-2a-KxZ"/>
                     <connections>
                         <outlet property="addButton" destination="vJ9-r5-6ab" id="fcw-cz-3FZ"/>
+                        <outlet property="countLabel" destination="yNV-su-qyg" id="ker-cP-Zh3"/>
                         <outlet property="countTextField" destination="Mek-J1-OI2" id="0sK-8L-xVY"/>
                         <outlet property="deleteButton" destination="8KZ-hj-FCy" id="xTy-Jv-qmh"/>
                         <outlet property="tableView" destination="MyP-1S-JgG" id="xPL-6M-kPb"/>
@@ -1160,24 +1161,6 @@
                 <customObject id="clB-Rr-DSb" customClass="EssayWorkDivideTypeTableViewDataSource"/>
             </objects>
             <point key="canvasLocation" x="2887" y="661"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="3cT-0y-bDY">
-            <objects>
-                <viewController id="mbz-It-VmZ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Fu7-Q9-xSZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="lkq-XB-dma"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xuV-xX-eCr">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mOa-8u-RTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2242" y="1243"/>
         </scene>
         <!--Other-->
         <scene sceneID="2Qh-YS-Ssm">

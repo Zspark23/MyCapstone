@@ -15,6 +15,8 @@
 @dynamic title;
 @dynamic type;
 @dynamic workDivideType;
+@dynamic homeworkQuestionsAmount;
+@dynamic dueDate;
 @dynamic tasks;
 
 @end

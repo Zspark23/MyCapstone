@@ -19,10 +19,10 @@
 		1F2CBF791B8E60D300F23B59 /* WorkTypePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF781B8E60D300F23B59 /* WorkTypePickerViewController.m */; };
 		1F2CBF7D1B8E75F400F23B59 /* WorkTypePickerViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF7C1B8E75F400F23B59 /* WorkTypePickerViewDataSource.m */; };
 		1F2CBF801B8F6D2800F23B59 /* WorkDividePickerViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF7F1B8F6D2800F23B59 /* WorkDividePickerViewDataSource.m */; };
-		1F2CBF8B1B8F7EBC00F23B59 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF8A1B8F7EBC00F23B59 /* Entry.m */; };
 		1F2CBF8E1B8F7EBC00F23B59 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF8D1B8F7EBC00F23B59 /* Task.m */; };
 		1F2CBF921B8F7F8700F23B59 /* EntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF911B8F7F8700F23B59 /* EntryController.m */; };
 		1F2CBF961B8F841500F23B59 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF951B8F841500F23B59 /* Stack.m */; };
+		1F2CBF9C1B8F878F00F23B59 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF9B1B8F878F00F23B59 /* Entry.m */; };
 		1FFB8E351B8BBCD000042907 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E341B8BBCD000042907 /* main.m */; };
 		1FFB8E381B8BBCD000042907 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E371B8BBCD000042907 /* AppDelegate.m */; };
 		1FFB8E3E1B8BBCD000042907 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E3D1B8BBCD000042907 /* MainScreenViewController.m */; };
@@ -74,14 +74,14 @@
 		1F2CBF7C1B8E75F400F23B59 /* WorkTypePickerViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkTypePickerViewDataSource.m; sourceTree = "<group>"; };
 		1F2CBF7E1B8F6D2800F23B59 /* WorkDividePickerViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkDividePickerViewDataSource.h; sourceTree = "<group>"; };
 		1F2CBF7F1B8F6D2800F23B59 /* WorkDividePickerViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkDividePickerViewDataSource.m; sourceTree = "<group>"; };
-		1F2CBF891B8F7EBC00F23B59 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entry.h; path = ../Entry.h; sourceTree = "<group>"; };
-		1F2CBF8A1B8F7EBC00F23B59 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entry.m; path = ../Entry.m; sourceTree = "<group>"; };
 		1F2CBF8C1B8F7EBC00F23B59 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = ../Task.h; sourceTree = "<group>"; };
 		1F2CBF8D1B8F7EBC00F23B59 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = ../Task.m; sourceTree = "<group>"; };
 		1F2CBF901B8F7F8700F23B59 /* EntryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryController.h; sourceTree = "<group>"; };
 		1F2CBF911B8F7F8700F23B59 /* EntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryController.m; sourceTree = "<group>"; };
 		1F2CBF941B8F841500F23B59 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		1F2CBF951B8F841500F23B59 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		1F2CBF9A1B8F878F00F23B59 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entry.h; path = ../Entry.h; sourceTree = "<group>"; };
+		1F2CBF9B1B8F878F00F23B59 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entry.m; path = ../Entry.m; sourceTree = "<group>"; };
 		1FFB8E2F1B8BBCD000042907 /* Due-Dates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Due-Dates.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFB8E331B8BBCD000042907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FFB8E341B8BBCD000042907 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -208,8 +208,8 @@
 		1F2CBF871B8F7D4200F23B59 /* Entry Model */ = {
 			isa = PBXGroup;
 			children = (
-				1F2CBF891B8F7EBC00F23B59 /* Entry.h */,
-				1F2CBF8A1B8F7EBC00F23B59 /* Entry.m */,
+				1F2CBF9A1B8F878F00F23B59 /* Entry.h */,
+				1F2CBF9B1B8F878F00F23B59 /* Entry.m */,
 			);
 			name = "Entry Model";
 			sourceTree = "<group>";
@@ -470,10 +470,10 @@
 				1F2CBF921B8F7F8700F23B59 /* EntryController.m in Sources */,
 				1FFB8E771B8BD1EF00042907 /* LabelAndSublabelTableViewCell.m in Sources */,
 				1F2CBF761B8E552B00F23B59 /* Model.xcdatamodeld in Sources */,
+				1F2CBF9C1B8F878F00F23B59 /* Entry.m in Sources */,
 				1F2CBF8E1B8F7EBC00F23B59 /* Task.m in Sources */,
 				1F2CBF5E1B8D0EA600F23B59 /* HomeworkEntryViewController.m in Sources */,
 				1F2CBF701B8E3E4F00F23B59 /* PracticeEntryViewController.m in Sources */,
-				1F2CBF8B1B8F7EBC00F23B59 /* Entry.m in Sources */,
 				1FFB8E381B8BBCD000042907 /* AppDelegate.m in Sources */,
 				1FFB8E6A1B8BC28B00042907 /* FAQDetailViewController.m in Sources */,
 				1F2CBF801B8F6D2800F23B59 /* WorkDividePickerViewDataSource.m in Sources */,

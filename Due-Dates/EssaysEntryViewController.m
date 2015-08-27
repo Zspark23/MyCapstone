@@ -7,6 +7,7 @@
 //
 
 #import "EssaysEntryViewController.h"
+#import "EntryController.h"
 
 @interface EssaysEntryViewController ()
 
@@ -14,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *countTextField;
 @property (strong, nonatomic) IBOutlet UIButton *deleteButton;
 @property (strong, nonatomic) IBOutlet UIButton *addButton;
+@property (strong, nonatomic) IBOutlet UILabel *countLabel;
 
 @end
 
@@ -37,15 +39,23 @@
         self.deleteButton.enabled = YES;
         self.deleteButton.backgroundColor = [UIColor darkGrayColor];
         [self.deleteButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+        
         self.addButton.enabled = YES;
         self.addButton.backgroundColor = [UIColor darkGrayColor];
         [self.addButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+        
+        self.countLabel.textColor = [UIColor lightGrayColor];
+        self.countTextField.enabled = NO;
     }else
     {
         self.deleteButton.enabled = NO;
         self.deleteButton.backgroundColor = [UIColor grayColor];
+        
         self.addButton.enabled = NO;
         self.addButton.backgroundColor = [UIColor grayColor];
+        
+        self.countLabel.textColor = [UIColor blackColor];
+        self.countTextField.enabled = YES;
     }
 }
 - (IBAction)submitButtonTapped:(UIButton *)sender

@@ -11,6 +11,6 @@
 
 @interface NewEntryViewController : UIViewController <UITextFieldDelegate, UIPickerViewDelegate>
 
-@property (nonatomic) Entry* entry;
+@property (nonatomic, strong) Entry* entry;
 
 @end

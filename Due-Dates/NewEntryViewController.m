@@ -7,6 +7,14 @@
 //
 
 #import "NewEntryViewController.h"
+#import "EntryController.h"
+#import "HomeworkEntryViewController.h"
+#import "EssaysEntryViewController.h"
+#import "ProjectEntryViewController.h"
+#import "TestsEntryViewController.h"
+#import "ChoresEntryViewController.h"
+#import "PracticeEntryViewController.h"
+#import "OtherEntryViewController.h"
 
 enum WorkType
 {
@@ -30,6 +38,8 @@ enum WorkType
 @property (strong, nonatomic) IBOutlet UIView *workDividePickerView;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *bottomLayoutConstraint;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *otherBottomLayoutConstraint;
+@property (strong, nonatomic) IBOutlet UIDatePicker *dueDatePicker;
+@property (strong, nonatomic) UITapGestureRecognizer *tap;
 
 @end
 
@@ -39,11 +49,34 @@ enum WorkType
     [super viewDidLoad];
     self.datePicker.minimumDate = [NSDate date];
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+   self.tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(workTypeEditingDidEnd:)];
-    [self.view addGestureRecognizer:tap];
+    [self.view addGestureRecognizer:self.tap];
 }
+
+- (void)dealloc {
+    
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    [self.view removeGestureRecognizer:self.tap];
+}
+
+//-(void) viewWillDisappear:(BOOL)animated {
+//    [super viewWillDisappear:animated];
+//    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound)
+//    {
+////        if (self.entry)
+////        {
+////            [[EntryController sharedInstance] deleteEntry:self.entry];
+////            [[EntryController sharedInstance] save];
+////        }
+//    }
+//    
+//}
 
 #pragma mark - Submit Button Tapped Method
 
@@ -86,25 +119,39 @@ enum WorkType
     }else
     {
         // Setting text field text to entry properties
-
+        
+        if (!self.entry)
+        {
+            self.entry = [[EntryController sharedInstance] createEntry];
+            self.entry.title = self.titleTextField.text;
+            self.entry.type = self.typeTextField.text;
+            self.entry.workDivideType = self.workDivideTextField.text;
+            self.entry.dueDate = self.dueDatePicker.date;
+        }else
+        {
+            self.entry.title = self.titleTextField.text;
+            self.entry.type = self.typeTextField.text;
+            self.entry.workDivideType = self.workDivideTextField.text;
+            self.entry.dueDate = self.dueDatePicker.date;
+        }
         
         // Checking to see what is in the type text field
         
         if ([self.typeTextField.text isEqualToString:@"Homework"]) // Homework
         {
-            [self performSegueWithIdentifier:@"homeworkEntry" sender:sender];
+            [self performSegueWithIdentifier:@"homeworkEntry" sender:self];
         }else if ([self.typeTextField.text isEqualToString:@"Essays"]) // Essays
         {
-            [self performSegueWithIdentifier:@"essaysEntry" sender:sender];
+            [self performSegueWithIdentifier:@"essaysEntry" sender:self];
         }else if ([self.typeTextField.text isEqualToString:@"Projects"]) // Projects
         {
-            [self performSegueWithIdentifier:@"projectsEntry" sender:sender];
+            [self performSegueWithIdentifier:@"projectsEntry" sender:self];
         }else if ([self.typeTextField.text isEqualToString:@"Tests"]) // Tests
         {
-            [self performSegueWithIdentifier:@"testsEntry" sender:sender];
+            [self performSegueWithIdentifier:@"testsEntry" sender:self];
         }else if ([self.typeTextField.text isEqualToString:@"Chores"]) // Chores
         {
-            [self performSegueWithIdentifier:@"choresEntry" sender:sender];
+            [self performSegueWithIdentifier:@"choresEntry" sender:self];
         }else if ([self.typeTextField.text isEqualToString:@"Practice/Exercise"] && [self.workDivideTextField.text isEqualToString:@"Hourly"])
             // Practice Hourly
         {
@@ -120,18 +167,18 @@ enum WorkType
         }else if ([self.typeTextField.text isEqualToString:@"Practice/Exercise"] && [self.workDivideTextField.text isEqualToString:@"Daily"])
             // Practice Daily
         {
-            [self performSegueWithIdentifier:@"practiceDailyEntry" sender:sender];
+            [self performSegueWithIdentifier:@"practiceDailyEntry" sender:self];
         }else if ([self.typeTextField.text isEqualToString:@"Practice/Exercise"] && [self.workDivideTextField.text isEqualToString:@"Weekly"])
             // Practice Weekly
         {
-            [self performSegueWithIdentifier:@"practiceWeeklyEntry" sender:sender];
+            [self performSegueWithIdentifier:@"practiceWeeklyEntry" sender:self];
         }else if ([self.typeTextField.text isEqualToString:@"Practice/Exercise"] && [self.workDivideTextField.text isEqualToString:@"Monthly"])
             // Practice Montly
         {
-            [self performSegueWithIdentifier:@"practiceMonthlyEntry" sender:sender];
+            [self performSegueWithIdentifier:@"practiceMonthlyEntry" sender:self];
         }else if ([self.typeTextField.text isEqualToString:@"Other"]) // Other
         {
-            [self performSegueWithIdentifier:@"otherEntry" sender:sender];
+            [self performSegueWithIdentifier:@"otherEntry" sender:self];
         }else // Something other then the seven listed above; shows an alert
         {
             UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Enter a Valid Type"
@@ -268,15 +315,52 @@ enum WorkType
     
 }
 
+#pragma mark - Work Types
+
 - (NSArray *)workTypeCategories
 {
     return @[@"Homework", @"Essays", @"Projects", @"Tests", @"Chores", @"Practice/Exercise", @"Other"];
 }
+
+#pragma mark - Work Divide Types
 
 - (NSArray *)workDivideCategories
 {
     return @[@"Hourly", @"Daily", @"Weekly", @"Monthly"];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"homeworkEntry"])
+    {
+        HomeworkEntryViewController *hwVC = segue.destinationViewController;
+        hwVC.entry = self.entry;
+    }else if([segue.identifier isEqualToString:@"essaysEntry"])
+    {
+        EssaysEntryViewController *essayVC = segue.destinationViewController;
+        essayVC.entry = self.entry;
+    }else if([segue.identifier isEqualToString:@"projectsEntry"])
+    {
+        ProjectEntryViewController *projectVC = segue.destinationViewController;
+        projectVC.entry = self.entry;
+    }else if([segue.identifier isEqualToString:@"testsEntry"])
+    {
+        TestsEntryViewController *testsVC = segue.destinationViewController;
+        testsVC.entry = self.entry;
+    }else if([segue.identifier isEqualToString:@"choresEntry"])
+    {
+        ChoresEntryViewController *choresVC = segue.destinationViewController;
+        choresVC.entry = self.entry;
+    }else if([segue.identifier isEqualToString:@"practiceDailyEntry"] || [segue.identifier isEqualToString:@"practiceWeeklyEntry"] || [segue.identifier isEqualToString:@"practiceMonthlyEntry"])
+    {
+        PracticeEntryViewController *practiceVC = segue.destinationViewController;
+        practiceVC.entry = self.entry;
+        
+    }else if([segue.identifier isEqualToString:@"otherEntry"])
+    {
+        OtherEntryViewController *otherVC = segue.destinationViewController;
+        otherVC.entry = self.entry;
+    }
+}
 
 @end

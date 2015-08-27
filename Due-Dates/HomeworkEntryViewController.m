@@ -7,6 +7,7 @@
 //
 
 #import "HomeworkEntryViewController.h"
+#import "EntryController.h"
 
 @interface HomeworkEntryViewController ()
 
@@ -37,6 +38,9 @@
         [self presentViewController:alert animated:YES completion:nil];
     }else
     {
+        self.entry.homeworkQuestionsAmount = [NSNumber numberWithInt:[self.numberOfQuestionsTextField.text intValue]];
+        self.entry = [[EntryController sharedInstance] createEntry];
+        [[EntryController sharedInstance] save];
         [self.navigationController popToRootViewControllerAnimated:YES];
     }
 }

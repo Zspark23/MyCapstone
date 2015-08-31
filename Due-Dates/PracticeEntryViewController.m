@@ -7,6 +7,8 @@
 //
 
 #import "PracticeEntryViewController.h"
+#import "Task.h"
+#import "EntryController.h"
 
 @interface PracticeEntryViewController ()
 
@@ -72,6 +74,8 @@
             [self presentViewController:alert animated:YES completion:nil];
         }else
         {
+            self.entry.practiceFrequency = [NSNumber numberWithInt:[self.practiceFrequencyTextField.text intValue]];
+            [[EntryController sharedInstance] save];
             [self.navigationController popToRootViewControllerAnimated:YES];
         }
     }

@@ -115,7 +115,7 @@
 - (NSArray *)practiceEntries
 {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Entry"];
-    request.predicate = [NSPredicate predicateWithFormat:@"type = %@", @"Practice"];
+    request.predicate = [NSPredicate predicateWithFormat:@"type = %@", @"Practice/Exercise"];
     
     NSError *error;
     
@@ -145,12 +145,6 @@
     }
     
     return essaysEntriesArray;
-}
-
-// All Entries Array
-- (NSArray *)allEntries
-{
-    return @[[self homeworkEntries], [self essaysEntries], [self projectsEntries], [self testsEntries], [self choresEntries], [self practiceEntries], [self otherEntries]];
 }
 
 - (Entry *)createEntry

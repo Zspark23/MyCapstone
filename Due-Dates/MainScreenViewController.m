@@ -63,7 +63,7 @@
                 titleOfNextVC = @"Chores";
                 break;
             case 7:
-                titleOfNextVC = @"Practice";
+                titleOfNextVC = @"Practice/Exercise";
                 break;
             case 8:
                 titleOfNextVC = @"Other";
@@ -76,13 +76,9 @@
 
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    if (indexPath.row == 0)
-//    {
-//        [self performSegueWithIdentifier:@"newEntry" sender:self];
-//    }
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 @end

@@ -16,13 +16,16 @@
 		1F2CBF701B8E3E4F00F23B59 /* PracticeEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF6F1B8E3E4F00F23B59 /* PracticeEntryViewController.m */; };
 		1F2CBF731B8E4BB200F23B59 /* OtherEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF721B8E4BB200F23B59 /* OtherEntryViewController.m */; };
 		1F2CBF761B8E552B00F23B59 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF741B8E552B00F23B59 /* Model.xcdatamodeld */; };
-		1F2CBF791B8E60D300F23B59 /* WorkTypePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF781B8E60D300F23B59 /* WorkTypePickerViewController.m */; };
 		1F2CBF7D1B8E75F400F23B59 /* WorkTypePickerViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF7C1B8E75F400F23B59 /* WorkTypePickerViewDataSource.m */; };
 		1F2CBF801B8F6D2800F23B59 /* WorkDividePickerViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF7F1B8F6D2800F23B59 /* WorkDividePickerViewDataSource.m */; };
 		1F2CBF8E1B8F7EBC00F23B59 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF8D1B8F7EBC00F23B59 /* Task.m */; };
 		1F2CBF921B8F7F8700F23B59 /* EntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF911B8F7F8700F23B59 /* EntryController.m */; };
 		1F2CBF961B8F841500F23B59 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF951B8F841500F23B59 /* Stack.m */; };
 		1F2CBF9C1B8F878F00F23B59 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF9B1B8F878F00F23B59 /* Entry.m */; };
+		1F2CBFA81B92347D00F23B59 /* EssayTasksTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBFA71B92347D00F23B59 /* EssayTasksTableViewDataSource.m */; };
+		1F2CBFAB1B9234D500F23B59 /* TasksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBFAA1B9234D500F23B59 /* TasksTableViewCell.m */; };
+		1F65B8861B94E57E0045715F /* ProjectTaskTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65B8851B94E57E0045715F /* ProjectTaskTableViewDataSource.m */; };
+		1F65B8891B94F3AC0045715F /* TestsTasksTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65B8881B94F3AC0045715F /* TestsTasksTableViewDataSource.m */; };
 		1FFB8E351B8BBCD000042907 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E341B8BBCD000042907 /* main.m */; };
 		1FFB8E381B8BBCD000042907 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E371B8BBCD000042907 /* AppDelegate.m */; };
 		1FFB8E3E1B8BBCD000042907 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E3D1B8BBCD000042907 /* MainScreenViewController.m */; };
@@ -68,8 +71,6 @@
 		1F2CBF711B8E4BB200F23B59 /* OtherEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherEntryViewController.h; sourceTree = "<group>"; };
 		1F2CBF721B8E4BB200F23B59 /* OtherEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherEntryViewController.m; sourceTree = "<group>"; };
 		1F2CBF751B8E552B00F23B59 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		1F2CBF771B8E60D300F23B59 /* WorkTypePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkTypePickerViewController.h; sourceTree = "<group>"; };
-		1F2CBF781B8E60D300F23B59 /* WorkTypePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkTypePickerViewController.m; sourceTree = "<group>"; };
 		1F2CBF7B1B8E75F400F23B59 /* WorkTypePickerViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkTypePickerViewDataSource.h; sourceTree = "<group>"; };
 		1F2CBF7C1B8E75F400F23B59 /* WorkTypePickerViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkTypePickerViewDataSource.m; sourceTree = "<group>"; };
 		1F2CBF7E1B8F6D2800F23B59 /* WorkDividePickerViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkDividePickerViewDataSource.h; sourceTree = "<group>"; };
@@ -82,6 +83,14 @@
 		1F2CBF951B8F841500F23B59 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		1F2CBF9A1B8F878F00F23B59 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entry.h; path = ../Entry.h; sourceTree = "<group>"; };
 		1F2CBF9B1B8F878F00F23B59 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entry.m; path = ../Entry.m; sourceTree = "<group>"; };
+		1F2CBFA61B92347D00F23B59 /* EssayTasksTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EssayTasksTableViewDataSource.h; sourceTree = "<group>"; };
+		1F2CBFA71B92347D00F23B59 /* EssayTasksTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EssayTasksTableViewDataSource.m; sourceTree = "<group>"; };
+		1F2CBFA91B9234D500F23B59 /* TasksTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasksTableViewCell.h; sourceTree = "<group>"; };
+		1F2CBFAA1B9234D500F23B59 /* TasksTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasksTableViewCell.m; sourceTree = "<group>"; };
+		1F65B8841B94E57E0045715F /* ProjectTaskTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectTaskTableViewDataSource.h; sourceTree = "<group>"; };
+		1F65B8851B94E57E0045715F /* ProjectTaskTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectTaskTableViewDataSource.m; sourceTree = "<group>"; };
+		1F65B8871B94F3AC0045715F /* TestsTasksTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestsTasksTableViewDataSource.h; sourceTree = "<group>"; };
+		1F65B8881B94F3AC0045715F /* TestsTasksTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestsTasksTableViewDataSource.m; sourceTree = "<group>"; };
 		1FFB8E2F1B8BBCD000042907 /* Due-Dates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Due-Dates.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFB8E331B8BBCD000042907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FFB8E341B8BBCD000042907 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -147,6 +156,8 @@
 				1F2CBF601B8D155A00F23B59 /* EssaysEntryViewController.m */,
 				1F2CBF621B8D15C900F23B59 /* EssayWorkDivideTypeTableViewDataSource.h */,
 				1F2CBF631B8D15C900F23B59 /* EssayWorkDivideTypeTableViewDataSource.m */,
+				1F2CBFA61B92347D00F23B59 /* EssayTasksTableViewDataSource.h */,
+				1F2CBFA71B92347D00F23B59 /* EssayTasksTableViewDataSource.m */,
 			);
 			name = "Essays Entry View Controller";
 			sourceTree = "<group>";
@@ -156,6 +167,8 @@
 			children = (
 				1F2CBF651B8D393500F23B59 /* ProjectEntryViewController.h */,
 				1F2CBF661B8D393500F23B59 /* ProjectEntryViewController.m */,
+				1F65B8841B94E57E0045715F /* ProjectTaskTableViewDataSource.h */,
+				1F65B8851B94E57E0045715F /* ProjectTaskTableViewDataSource.m */,
 			);
 			name = "Projects Entry View Controller";
 			sourceTree = "<group>";
@@ -165,6 +178,8 @@
 			children = (
 				1F2CBF681B8E13D600F23B59 /* TestsEntryViewController.h */,
 				1F2CBF691B8E13D600F23B59 /* TestsEntryViewController.m */,
+				1F65B8871B94F3AC0045715F /* TestsTasksTableViewDataSource.h */,
+				1F65B8881B94F3AC0045715F /* TestsTasksTableViewDataSource.m */,
 			);
 			name = "Tests Entry View Controller";
 			sourceTree = "<group>";
@@ -196,15 +211,6 @@
 			name = "Other Entry View Controller";
 			sourceTree = "<group>";
 		};
-		1F2CBF7A1B8E60DA00F23B59 /* Picker View View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				1F2CBF771B8E60D300F23B59 /* WorkTypePickerViewController.h */,
-				1F2CBF781B8E60D300F23B59 /* WorkTypePickerViewController.m */,
-			);
-			name = "Picker View View Controllers";
-			sourceTree = "<group>";
-		};
 		1F2CBF871B8F7D4200F23B59 /* Entry Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +225,8 @@
 			children = (
 				1F2CBF8C1B8F7EBC00F23B59 /* Task.h */,
 				1F2CBF8D1B8F7EBC00F23B59 /* Task.m */,
+				1F2CBFA91B9234D500F23B59 /* TasksTableViewCell.h */,
+				1F2CBFAA1B9234D500F23B59 /* TasksTableViewCell.m */,
 			);
 			name = "Task Model";
 			sourceTree = "<group>";
@@ -265,7 +273,6 @@
 			children = (
 				1FFB8E361B8BBCD000042907 /* AppDelegate.h */,
 				1FFB8E371B8BBCD000042907 /* AppDelegate.m */,
-				1F2CBF7A1B8E60DA00F23B59 /* Picker View View Controllers */,
 				1F2CBF551B8D0DB300F23B59 /* Homework Entry View Controller */,
 				1F2CBF561B8D0DCC00F23B59 /* Essays Entry View Controller */,
 				1F2CBF571B8D0DEB00F23B59 /* Projects Entry View Controller */,
@@ -460,18 +467,21 @@
 			files = (
 				1F2CBF961B8F841500F23B59 /* Stack.m in Sources */,
 				1FFB8E691B8BC28B00042907 /* FAQTableViewDataSource.m in Sources */,
-				1F2CBF791B8E60D300F23B59 /* WorkTypePickerViewController.m in Sources */,
 				1FFB8E711B8BC7BD00042907 /* MainScreenTableViewDataSource.m in Sources */,
 				1F2CBF6D1B8E190400F23B59 /* ChoresEntryViewController.m in Sources */,
+				1F2CBFA81B92347D00F23B59 /* EssayTasksTableViewDataSource.m in Sources */,
 				1F2CBF611B8D155A00F23B59 /* EssaysEntryViewController.m in Sources */,
 				1FFB8E7B1B8BD5E800042907 /* NewEntryViewController.m in Sources */,
 				1F2CBF7D1B8E75F400F23B59 /* WorkTypePickerViewDataSource.m in Sources */,
 				1FFB8E6B1B8BC28B00042907 /* FAQViewController.m in Sources */,
+				1F65B8891B94F3AC0045715F /* TestsTasksTableViewDataSource.m in Sources */,
 				1F2CBF921B8F7F8700F23B59 /* EntryController.m in Sources */,
 				1FFB8E771B8BD1EF00042907 /* LabelAndSublabelTableViewCell.m in Sources */,
 				1F2CBF761B8E552B00F23B59 /* Model.xcdatamodeld in Sources */,
+				1F2CBFAB1B9234D500F23B59 /* TasksTableViewCell.m in Sources */,
 				1F2CBF9C1B8F878F00F23B59 /* Entry.m in Sources */,
 				1F2CBF8E1B8F7EBC00F23B59 /* Task.m in Sources */,
+				1F65B8861B94E57E0045715F /* ProjectTaskTableViewDataSource.m in Sources */,
 				1F2CBF5E1B8D0EA600F23B59 /* HomeworkEntryViewController.m in Sources */,
 				1F2CBF701B8E3E4F00F23B59 /* PracticeEntryViewController.m in Sources */,
 				1FFB8E381B8BBCD000042907 /* AppDelegate.m in Sources */,

@@ -2,7 +2,7 @@
 //  Entry.m
 //  Due-Dates
 //
-//  Created by Zack Spicer on 8/27/15.
+//  Created by Zack Spicer on 8/30/15.
 //  Copyright (c) 2015 Dev Mountain. All rights reserved.
 //
 
@@ -12,11 +12,13 @@
 
 @implementation Entry
 
+@dynamic dueDate;
+@dynamic homeworkQuestionsAmount;
 @dynamic title;
 @dynamic type;
 @dynamic workDivideType;
-@dynamic homeworkQuestionsAmount;
-@dynamic dueDate;
+@dynamic essayWorkType;
+@dynamic essayDivideCount;
 @dynamic tasks;
 
 @end

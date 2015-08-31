@@ -2,7 +2,7 @@
 //  Entry.h
 //  Due-Dates
 //
-//  Created by Zack Spicer on 8/27/15.
+//  Created by Zack Spicer on 8/30/15.
 //  Copyright (c) 2015 Dev Mountain. All rights reserved.
 //
 
@@ -13,11 +13,13 @@
 
 @interface Entry : NSManagedObject
 
+@property (nonatomic, retain) NSDate * dueDate;
+@property (nonatomic, retain) NSNumber * homeworkQuestionsAmount;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * type;
 @property (nonatomic, retain) NSString * workDivideType;
-@property (nonatomic, retain) NSNumber * homeworkQuestionsAmount;
-@property (nonatomic, retain) NSDate * dueDate;
+@property (nonatomic, retain) NSString * essayWorkType;
+@property (nonatomic, retain) NSNumber * essayDivideCount;
 @property (nonatomic, retain) NSSet *tasks;
 @end
 

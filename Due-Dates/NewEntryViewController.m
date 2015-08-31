@@ -30,15 +30,15 @@ enum WorkType
 
 @interface NewEntryViewController ()
 
-@property (strong, nonatomic) IBOutlet UITextField *titleTextField;
-@property (strong, nonatomic) IBOutlet UITextField *typeTextField;
-@property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
-@property (strong, nonatomic) IBOutlet UITextField *workDivideTextField;
-@property (strong, nonatomic) IBOutlet UIView *workTypePickerView;
-@property (strong, nonatomic) IBOutlet UIView *workDividePickerView;
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *bottomLayoutConstraint;
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *otherBottomLayoutConstraint;
-@property (strong, nonatomic) IBOutlet UIDatePicker *dueDatePicker;
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
+@property (weak, nonatomic) IBOutlet UITextField *typeTextField;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UITextField *workDivideTextField;
+@property (weak, nonatomic) IBOutlet UIView *workTypePickerView;
+@property (weak, nonatomic) IBOutlet UIView *workDividePickerView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomLayoutConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *otherBottomLayoutConstraint;
+@property (weak, nonatomic) IBOutlet UIDatePicker *dueDatePicker;
 @property (strong, nonatomic) UITapGestureRecognizer *tap;
 
 @end
@@ -49,34 +49,29 @@ enum WorkType
     [super viewDidLoad];
     self.datePicker.minimumDate = [NSDate date];
     
-   self.tap = [[UITapGestureRecognizer alloc]
-                                   initWithTarget:self
-                                   action:@selector(workTypeEditingDidEnd:)];
-    [self.view addGestureRecognizer:self.tap];
-}
-
-- (void)dealloc {
+    NSLog(@"%@", self);
     
+   self.tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(workTypeEditingDidEnd:)];
+    [self.view addGestureRecognizer:self.tap];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     
-    [self.view removeGestureRecognizer:self.tap];
 }
 
-//-(void) viewWillDisappear:(BOOL)animated {
-//    [super viewWillDisappear:animated];
-//    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound)
-//    {
-////        if (self.entry)
-////        {
-////            [[EntryController sharedInstance] deleteEntry:self.entry];
-////            [[EntryController sharedInstance] save];
-////        }
-//    }
-//    
-//}
+-(void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound)
+    {
+        if (self.entry)
+        {
+            [[EntryController sharedInstance] deleteEntry:self.entry];
+            [[EntryController sharedInstance] save];
+        }
+    }
+    
+}
 
 #pragma mark - Submit Button Tapped Method
 
@@ -200,6 +195,10 @@ enum WorkType
 - (IBAction)workTypeEditingDidBegin:(id)sender
 {
     [sender resignFirstResponder];
+    if ([self.typeTextField.text isEqualToString:@""])
+    {
+        self.typeTextField.text = @"Homework";
+    }
     
     CABasicAnimation *animation = [CABasicAnimation animation];
     animation.keyPath = @"position.y";
@@ -234,6 +233,7 @@ enum WorkType
 
 - (IBAction)cancelButtonTapped:(UIBarButtonItem *)sender
 {
+    self.typeTextField.text = @"";
     [self workTypeEditingDidEnd:self.typeTextField];
 }
 
@@ -244,9 +244,14 @@ enum WorkType
 
 #pragma mark - Work Divide Text Field Methods
 
-- (IBAction)editingDidBegin:(id)sender
+- (IBAction)workDivideEditingDidBegin:(id)sender
 {
     [sender resignFirstResponder];
+    if ([self.workDivideTextField.text isEqualToString:@""])
+    {
+        self.workDivideTextField.text = @"Hourly";
+    }
+    
     
     CABasicAnimation *animation = [CABasicAnimation animation];
     animation.keyPath = @"position.y";
@@ -280,6 +285,7 @@ enum WorkType
 }
 - (IBAction)workDivideCancelButtonTapped:(UIBarButtonItem *)sender
 {
+    self.workDivideTextField.text = @"";
     [self workDivideEditingDidEnd:self.workDivideTextField];
 }
 
@@ -361,6 +367,10 @@ enum WorkType
         OtherEntryViewController *otherVC = segue.destinationViewController;
         otherVC.entry = self.entry;
     }
+}
+
+-(void)dealloc {
+    NSLog(@"Deallocated %@!", self);
 }
 
 @end

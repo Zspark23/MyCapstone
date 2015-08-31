@@ -26,6 +26,7 @@
 		1F2CBFAB1B9234D500F23B59 /* TasksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBFAA1B9234D500F23B59 /* TasksTableViewCell.m */; };
 		1F65B8861B94E57E0045715F /* ProjectTaskTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65B8851B94E57E0045715F /* ProjectTaskTableViewDataSource.m */; };
 		1F65B8891B94F3AC0045715F /* TestsTasksTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65B8881B94F3AC0045715F /* TestsTasksTableViewDataSource.m */; };
+		1F65B88C1B94F7D50045715F /* ChoresTaskTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65B88B1B94F7D50045715F /* ChoresTaskTableViewDataSource.m */; };
 		1FFB8E351B8BBCD000042907 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E341B8BBCD000042907 /* main.m */; };
 		1FFB8E381B8BBCD000042907 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E371B8BBCD000042907 /* AppDelegate.m */; };
 		1FFB8E3E1B8BBCD000042907 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E3D1B8BBCD000042907 /* MainScreenViewController.m */; };
@@ -91,6 +92,8 @@
 		1F65B8851B94E57E0045715F /* ProjectTaskTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectTaskTableViewDataSource.m; sourceTree = "<group>"; };
 		1F65B8871B94F3AC0045715F /* TestsTasksTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestsTasksTableViewDataSource.h; sourceTree = "<group>"; };
 		1F65B8881B94F3AC0045715F /* TestsTasksTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestsTasksTableViewDataSource.m; sourceTree = "<group>"; };
+		1F65B88A1B94F7D50045715F /* ChoresTaskTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoresTaskTableViewDataSource.h; sourceTree = "<group>"; };
+		1F65B88B1B94F7D50045715F /* ChoresTaskTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoresTaskTableViewDataSource.m; sourceTree = "<group>"; };
 		1FFB8E2F1B8BBCD000042907 /* Due-Dates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Due-Dates.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFB8E331B8BBCD000042907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FFB8E341B8BBCD000042907 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -189,6 +192,8 @@
 			children = (
 				1F2CBF6B1B8E190400F23B59 /* ChoresEntryViewController.h */,
 				1F2CBF6C1B8E190400F23B59 /* ChoresEntryViewController.m */,
+				1F65B88A1B94F7D50045715F /* ChoresTaskTableViewDataSource.h */,
+				1F65B88B1B94F7D50045715F /* ChoresTaskTableViewDataSource.m */,
 			);
 			name = "Chores Entry View Controller";
 			sourceTree = "<group>";
@@ -476,6 +481,7 @@
 				1FFB8E6B1B8BC28B00042907 /* FAQViewController.m in Sources */,
 				1F65B8891B94F3AC0045715F /* TestsTasksTableViewDataSource.m in Sources */,
 				1F2CBF921B8F7F8700F23B59 /* EntryController.m in Sources */,
+				1F65B88C1B94F7D50045715F /* ChoresTaskTableViewDataSource.m in Sources */,
 				1FFB8E771B8BD1EF00042907 /* LabelAndSublabelTableViewCell.m in Sources */,
 				1F2CBF761B8E552B00F23B59 /* Model.xcdatamodeld in Sources */,
 				1F2CBFAB1B9234D500F23B59 /* TasksTableViewCell.m in Sources */,

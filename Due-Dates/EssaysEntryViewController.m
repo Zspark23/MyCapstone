@@ -107,6 +107,7 @@
         [self presentViewController:alert animated:YES completion:nil];
     }else
     {
+        [[EntryController sharedInstance] save];
         [self.navigationController popToRootViewControllerAnimated:YES];
     }
 }

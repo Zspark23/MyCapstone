@@ -2,7 +2,7 @@
 //  Entry.h
 //  Due-Dates
 //
-//  Created by Zack Spicer on 8/31/15.
+//  Created by Zack Spicer on 9/1/15.
 //  Copyright (c) 2015 Dev Mountain. All rights reserved.
 //
 
@@ -21,6 +21,7 @@
 @property (nonatomic, retain) NSString * type;
 @property (nonatomic, retain) NSString * workDivideType;
 @property (nonatomic, retain) NSNumber * practiceFrequency;
+@property (nonatomic, retain) NSDate * dateCreated;
 @property (nonatomic, retain) NSSet *tasks;
 @end
 

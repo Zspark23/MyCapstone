@@ -27,6 +27,7 @@
 		1F65B8861B94E57E0045715F /* ProjectTaskTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65B8851B94E57E0045715F /* ProjectTaskTableViewDataSource.m */; };
 		1F65B8891B94F3AC0045715F /* TestsTasksTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65B8881B94F3AC0045715F /* TestsTasksTableViewDataSource.m */; };
 		1F65B88C1B94F7D50045715F /* ChoresTaskTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65B88B1B94F7D50045715F /* ChoresTaskTableViewDataSource.m */; };
+		1F65B8921B9504AF0045715F /* OtherTaskTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65B8911B9504AF0045715F /* OtherTaskTableViewDataSource.m */; };
 		1FFB8E351B8BBCD000042907 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E341B8BBCD000042907 /* main.m */; };
 		1FFB8E381B8BBCD000042907 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E371B8BBCD000042907 /* AppDelegate.m */; };
 		1FFB8E3E1B8BBCD000042907 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E3D1B8BBCD000042907 /* MainScreenViewController.m */; };
@@ -94,7 +95,8 @@
 		1F65B8881B94F3AC0045715F /* TestsTasksTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestsTasksTableViewDataSource.m; sourceTree = "<group>"; };
 		1F65B88A1B94F7D50045715F /* ChoresTaskTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoresTaskTableViewDataSource.h; sourceTree = "<group>"; };
 		1F65B88B1B94F7D50045715F /* ChoresTaskTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoresTaskTableViewDataSource.m; sourceTree = "<group>"; };
-		1F65B88D1B95002A0045715F /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		1F65B8901B9504AF0045715F /* OtherTaskTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherTaskTableViewDataSource.h; sourceTree = "<group>"; };
+		1F65B8911B9504AF0045715F /* OtherTaskTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherTaskTableViewDataSource.m; sourceTree = "<group>"; };
 		1FFB8E2F1B8BBCD000042907 /* Due-Dates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Due-Dates.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFB8E331B8BBCD000042907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FFB8E341B8BBCD000042907 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -213,6 +215,8 @@
 			children = (
 				1F2CBF711B8E4BB200F23B59 /* OtherEntryViewController.h */,
 				1F2CBF721B8E4BB200F23B59 /* OtherEntryViewController.m */,
+				1F65B8901B9504AF0045715F /* OtherTaskTableViewDataSource.h */,
+				1F65B8911B9504AF0045715F /* OtherTaskTableViewDataSource.m */,
 			);
 			name = "Other Entry View Controller";
 			sourceTree = "<group>";
@@ -259,7 +263,6 @@
 		1FFB8E261B8BBCD000042907 = {
 			isa = PBXGroup;
 			children = (
-				1F65B88D1B95002A0045715F /* Entry.h */,
 				1FFB8E311B8BBCD000042907 /* Due-Dates */,
 				1FFB8E4E1B8BBCD100042907 /* Due-DatesTests */,
 				1FFB8E301B8BBCD000042907 /* Products */,
@@ -500,6 +503,7 @@
 				1F2CBF641B8D15C900F23B59 /* EssayWorkDivideTypeTableViewDataSource.m in Sources */,
 				1FFB8E3E1B8BBCD000042907 /* MainScreenViewController.m in Sources */,
 				1FFB8E351B8BBCD000042907 /* main.m in Sources */,
+				1F65B8921B9504AF0045715F /* OtherTaskTableViewDataSource.m in Sources */,
 				1FFB8E741B8BCA1B00042907 /* NewEntryTableViewCell.m in Sources */,
 				1F2CBF671B8D393500F23B59 /* ProjectEntryViewController.m in Sources */,
 				1F2CBF731B8E4BB200F23B59 /* OtherEntryViewController.m in Sources */,

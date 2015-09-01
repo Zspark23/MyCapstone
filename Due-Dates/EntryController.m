@@ -29,7 +29,11 @@
     
     NSError *error;
     
-    NSArray *homeworkEntriesArray = [[[Stack sharedInstance] managedObjectContext] executeFetchRequest:request error:&error];
+    NSMutableArray *homeworkEntriesArray = [[[[Stack sharedInstance] managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
+    NSSortDescriptor *dateDescriptor = [NSSortDescriptor
+                                        sortDescriptorWithKey:@"dateCreated"
+                                        ascending:YES];
+    [homeworkEntriesArray sortUsingDescriptors:[NSArray arrayWithObject:dateDescriptor]];
     
     if (error)
     {
@@ -47,7 +51,11 @@
     
     NSError *error;
     
-    NSArray *essaysEntriesArray = [[[Stack sharedInstance] managedObjectContext] executeFetchRequest:request error:&error];
+    NSMutableArray *essaysEntriesArray = [[[[Stack sharedInstance] managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
+    NSSortDescriptor *dateDescriptor = [NSSortDescriptor
+                                        sortDescriptorWithKey:@"dateCreated"
+                                        ascending:YES];
+    [essaysEntriesArray sortUsingDescriptors:[NSArray arrayWithObject:dateDescriptor]];
     
     if (error)
     {
@@ -65,14 +73,18 @@
     
     NSError *error;
     
-    NSArray *essaysEntriesArray = [[[Stack sharedInstance] managedObjectContext] executeFetchRequest:request error:&error];
+    NSMutableArray *projectsEntriesArray = [[[[Stack sharedInstance] managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
+    NSSortDescriptor *dateDescriptor = [NSSortDescriptor
+                                        sortDescriptorWithKey:@"dateCreated"
+                                        ascending:YES];
+    [projectsEntriesArray sortUsingDescriptors:[NSArray arrayWithObject:dateDescriptor]];
     
     if (error)
     {
         NSLog(@"%@", error.localizedDescription);
     }
     
-    return essaysEntriesArray;
+    return projectsEntriesArray;
 }
 
 // Tests Entries Array
@@ -83,14 +95,18 @@
     
     NSError *error;
     
-    NSArray *essaysEntriesArray = [[[Stack sharedInstance] managedObjectContext] executeFetchRequest:request error:&error];
+    NSMutableArray *testsEntriesArray = [[[[Stack sharedInstance] managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
+    NSSortDescriptor *dateDescriptor = [NSSortDescriptor
+                                        sortDescriptorWithKey:@"dateCreated"
+                                        ascending:YES];
+    [testsEntriesArray sortUsingDescriptors:[NSArray arrayWithObject:dateDescriptor]];
     
     if (error)
     {
         NSLog(@"%@", error.localizedDescription);
     }
     
-    return essaysEntriesArray;
+    return testsEntriesArray;
 }
 
 // Chores Entries Array
@@ -101,14 +117,14 @@
     
     NSError *error;
     
-    NSArray *essaysEntriesArray = [[[Stack sharedInstance] managedObjectContext] executeFetchRequest:request error:&error];
+    NSMutableArray *choresEntriesArray = [[[[Stack sharedInstance] managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
     
     if (error)
     {
         NSLog(@"%@", error.localizedDescription);
     }
     
-    return essaysEntriesArray;
+    return choresEntriesArray;
 }
 
 // Practice Entries Array
@@ -119,14 +135,18 @@
     
     NSError *error;
     
-    NSArray *essaysEntriesArray = [[[Stack sharedInstance] managedObjectContext] executeFetchRequest:request error:&error];
+    NSMutableArray *practiceEntriesArray = [[[[Stack sharedInstance] managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
+    NSSortDescriptor *dateDescriptor = [NSSortDescriptor
+                                        sortDescriptorWithKey:@"dateCreated"
+                                        ascending:YES];
+    [practiceEntriesArray sortUsingDescriptors:[NSArray arrayWithObject:dateDescriptor]];
     
     if (error)
     {
         NSLog(@"%@", error.localizedDescription);
     }
     
-    return essaysEntriesArray;
+    return practiceEntriesArray;
 }
 
 // Other Entries Array
@@ -137,14 +157,18 @@
     
     NSError *error;
     
-    NSArray *essaysEntriesArray = [[[Stack sharedInstance] managedObjectContext] executeFetchRequest:request error:&error];
+    NSMutableArray *otherEntriesArray = [[[[Stack sharedInstance] managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
+    NSSortDescriptor *dateDescriptor = [NSSortDescriptor
+                                        sortDescriptorWithKey:@"dateCreated"
+                                        ascending:YES];
+    [otherEntriesArray sortUsingDescriptors:[NSArray arrayWithObject:dateDescriptor]];
     
     if (error)
     {
         NSLog(@"%@", error.localizedDescription);
     }
     
-    return essaysEntriesArray;
+    return otherEntriesArray;
 }
 
 - (Entry *)createEntry

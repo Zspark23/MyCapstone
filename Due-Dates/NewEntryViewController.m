@@ -122,12 +122,15 @@ enum WorkType
             self.entry.type = self.typeTextField.text;
             self.entry.workDivideType = self.workDivideTextField.text;
             self.entry.dueDate = self.dueDatePicker.date;
+            self.entry.dateCreated = [NSDate date];
+            
         }else
         {
             self.entry.title = self.titleTextField.text;
             self.entry.type = self.typeTextField.text;
             self.entry.workDivideType = self.workDivideTextField.text;
             self.entry.dueDate = self.dueDatePicker.date;
+            self.entry.dateCreated = [NSDate date];
         }
         
         // Checking to see what is in the type text field

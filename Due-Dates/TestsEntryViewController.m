@@ -8,6 +8,7 @@
 
 #import "TestsEntryViewController.h"
 #import "Task.h"
+#import "EntryController.h"
 
 @interface TestsEntryViewController ()
 
@@ -26,7 +27,22 @@
 
 - (IBAction)submitButtonTapped:(UIButton *)sender
 {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    if (self.entry.tasks.count == 0)
+    {
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Please Enter Tasks"
+                                                                       message:@"You must have at least one task"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {}];
+        
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
+    }else
+    {
+        [[EntryController sharedInstance] save];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
 }
 
 - (IBAction)testAddButtonTapped:(UIButton *)sender

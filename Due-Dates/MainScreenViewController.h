@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainScreenViewController : UIViewController
+@interface MainScreenViewController : UIViewController <UITableViewDelegate>
 
 
 @end

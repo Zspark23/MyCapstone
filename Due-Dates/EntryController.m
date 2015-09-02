@@ -171,6 +171,11 @@
     return otherEntriesArray;
 }
 
+- (NSArray *)allEntries
+{
+    return @[self.homeworkEntries, self.essaysEntries, self.projectsEntries, self.testsEntries, self.choresEntries, self.practiceEntries, self.otherEntries];
+}
+
 - (Entry *)createEntry
 {
     Entry *entry = [NSEntityDescription insertNewObjectForEntityForName:@"Entry" inManagedObjectContext:[[Stack sharedInstance] managedObjectContext]];

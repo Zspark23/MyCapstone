@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F21562C1B96363C00B17C66 /* EntryDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F21562B1B96363C00B17C66 /* EntryDisplayViewController.m */; };
+		1F2156321B9641E500B17C66 /* EntryDisplayTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2156311B9641E500B17C66 /* EntryDisplayTableViewDataSource.m */; };
+		1F2156351B96426E00B17C66 /* EntryDisplayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2156341B96426E00B17C66 /* EntryDisplayTableViewCell.m */; };
 		1F2CBF5E1B8D0EA600F23B59 /* HomeworkEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF5D1B8D0EA600F23B59 /* HomeworkEntryViewController.m */; };
 		1F2CBF611B8D155A00F23B59 /* EssaysEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF601B8D155A00F23B59 /* EssaysEntryViewController.m */; };
 		1F2CBF641B8D15C900F23B59 /* EssayWorkDivideTypeTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CBF631B8D15C900F23B59 /* EssayWorkDivideTypeTableViewDataSource.m */; };
@@ -28,6 +31,9 @@
 		1F65B8891B94F3AC0045715F /* TestsTasksTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65B8881B94F3AC0045715F /* TestsTasksTableViewDataSource.m */; };
 		1F65B88C1B94F7D50045715F /* ChoresTaskTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65B88B1B94F7D50045715F /* ChoresTaskTableViewDataSource.m */; };
 		1F65B8921B9504AF0045715F /* OtherTaskTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65B8911B9504AF0045715F /* OtherTaskTableViewDataSource.m */; };
+		1FDD4D461B976447008B605F /* MPCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDD4D3E1B976447008B605F /* MPCheckBox.m */; };
+		1FDD4D471B976447008B605F /* MPCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDD4D411B976447008B605F /* MPCheckBoxGroup.m */; };
+		1FDD4D481B976447008B605F /* MPTapGetureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDD4D451B976447008B605F /* MPTapGetureRecognizer.m */; };
 		1FFB8E351B8BBCD000042907 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E341B8BBCD000042907 /* main.m */; };
 		1FFB8E381B8BBCD000042907 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E371B8BBCD000042907 /* AppDelegate.m */; };
 		1FFB8E3E1B8BBCD000042907 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFB8E3D1B8BBCD000042907 /* MainScreenViewController.m */; };
@@ -56,6 +62,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F21562A1B96363C00B17C66 /* EntryDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryDisplayViewController.h; sourceTree = "<group>"; };
+		1F21562B1B96363C00B17C66 /* EntryDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryDisplayViewController.m; sourceTree = "<group>"; };
+		1F2156301B9641E500B17C66 /* EntryDisplayTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryDisplayTableViewDataSource.h; sourceTree = "<group>"; };
+		1F2156311B9641E500B17C66 /* EntryDisplayTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryDisplayTableViewDataSource.m; sourceTree = "<group>"; };
+		1F2156331B96426E00B17C66 /* EntryDisplayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryDisplayTableViewCell.h; sourceTree = "<group>"; };
+		1F2156341B96426E00B17C66 /* EntryDisplayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryDisplayTableViewCell.m; sourceTree = "<group>"; };
 		1F2CBF5C1B8D0EA600F23B59 /* HomeworkEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeworkEntryViewController.h; sourceTree = "<group>"; };
 		1F2CBF5D1B8D0EA600F23B59 /* HomeworkEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeworkEntryViewController.m; sourceTree = "<group>"; };
 		1F2CBF5F1B8D155A00F23B59 /* EssaysEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EssaysEntryViewController.h; sourceTree = "<group>"; };
@@ -97,6 +109,15 @@
 		1F65B88B1B94F7D50045715F /* ChoresTaskTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoresTaskTableViewDataSource.m; sourceTree = "<group>"; };
 		1F65B8901B9504AF0045715F /* OtherTaskTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherTaskTableViewDataSource.h; sourceTree = "<group>"; };
 		1F65B8911B9504AF0045715F /* OtherTaskTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherTaskTableViewDataSource.m; sourceTree = "<group>"; };
+		1FDD4D3D1B976447008B605F /* MPCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCheckBox.h; sourceTree = "<group>"; };
+		1FDD4D3E1B976447008B605F /* MPCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCheckBox.m; sourceTree = "<group>"; };
+		1FDD4D3F1B976447008B605F /* MPCheckBoxDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCheckBoxDelegate.h; sourceTree = "<group>"; };
+		1FDD4D401B976447008B605F /* MPCheckBoxGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCheckBoxGroup.h; sourceTree = "<group>"; };
+		1FDD4D411B976447008B605F /* MPCheckBoxGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCheckBoxGroup.m; sourceTree = "<group>"; };
+		1FDD4D421B976447008B605F /* MPCheckBoxGroupDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCheckBoxGroupDelegate.h; sourceTree = "<group>"; };
+		1FDD4D431B976447008B605F /* MPTapGestureRecognizerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTapGestureRecognizerDelegate.h; sourceTree = "<group>"; };
+		1FDD4D441B976447008B605F /* MPTapGetureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTapGetureRecognizer.h; sourceTree = "<group>"; };
+		1FDD4D451B976447008B605F /* MPTapGetureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTapGetureRecognizer.m; sourceTree = "<group>"; };
 		1FFB8E2F1B8BBCD000042907 /* Due-Dates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Due-Dates.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFB8E331B8BBCD000042907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FFB8E341B8BBCD000042907 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -146,6 +167,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F2156291B9635F600B17C66 /* Entry Display View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F21562A1B96363C00B17C66 /* EntryDisplayViewController.h */,
+				1F21562B1B96363C00B17C66 /* EntryDisplayViewController.m */,
+				1F2156331B96426E00B17C66 /* EntryDisplayTableViewCell.h */,
+				1F2156341B96426E00B17C66 /* EntryDisplayTableViewCell.m */,
+				1F2156301B9641E500B17C66 /* EntryDisplayTableViewDataSource.h */,
+				1F2156311B9641E500B17C66 /* EntryDisplayTableViewDataSource.m */,
+			);
+			name = "Entry Display View Controller";
+			sourceTree = "<group>";
+		};
 		1F2CBF551B8D0DB300F23B59 /* Homework Entry View Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +294,23 @@
 			path = "Due-DatesTests";
 			sourceTree = SOURCE_ROOT;
 		};
+		1FDD4D3C1B976437008B605F /* Check Box Class */ = {
+			isa = PBXGroup;
+			children = (
+				1FDD4D3D1B976447008B605F /* MPCheckBox.h */,
+				1FDD4D3E1B976447008B605F /* MPCheckBox.m */,
+				1FDD4D3F1B976447008B605F /* MPCheckBoxDelegate.h */,
+				1FDD4D401B976447008B605F /* MPCheckBoxGroup.h */,
+				1FDD4D411B976447008B605F /* MPCheckBoxGroup.m */,
+				1FDD4D421B976447008B605F /* MPCheckBoxGroupDelegate.h */,
+				1FDD4D431B976447008B605F /* MPTapGestureRecognizerDelegate.h */,
+				1FDD4D441B976447008B605F /* MPTapGetureRecognizer.h */,
+				1FDD4D451B976447008B605F /* MPTapGetureRecognizer.m */,
+			);
+			name = "Check Box Class";
+			path = "Due-DatesTests";
+			sourceTree = SOURCE_ROOT;
+		};
 		1FFB8E261B8BBCD000042907 = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +334,7 @@
 			children = (
 				1FFB8E361B8BBCD000042907 /* AppDelegate.h */,
 				1FFB8E371B8BBCD000042907 /* AppDelegate.m */,
+				1F2156291B9635F600B17C66 /* Entry Display View Controller */,
 				1F2CBF551B8D0DB300F23B59 /* Homework Entry View Controller */,
 				1F2CBF561B8D0DCC00F23B59 /* Essays Entry View Controller */,
 				1F2CBF571B8D0DEB00F23B59 /* Projects Entry View Controller */,
@@ -290,12 +342,13 @@
 				1F2CBF591B8D0E2600F23B59 /* Chores Entry View Controller */,
 				1F2CBF5A1B8D0E3000F23B59 /* Practice Entry View Controller */,
 				1F2CBF5B1B8D0E3900F23B59 /* Other Entry View Controller */,
-				1FFB8E781B8BD5B300042907 /* New Entry View Controllers */,
+				1FFB8E781B8BD5B300042907 /* New Entry View Controller */,
 				1FFB8E6E1B8BC78400042907 /* Main Screen */,
 				1FFB8E6D1B8BC29900042907 /* FAQ's */,
 				1F2CBF881B8F7D4B00F23B59 /* Task Model */,
 				1F2CBF871B8F7D4200F23B59 /* Entry Model */,
 				1F2CBF8F1B8F7F6D00F23B59 /* Entry Controller */,
+				1FDD4D3C1B976437008B605F /* Check Box Class */,
 				1F2CBF931B8F840400F23B59 /* Stack */,
 				1FFB8E3F1B8BBCD000042907 /* Main.storyboard */,
 				1FFB8E421B8BBCD000042907 /* Images.xcassets */,
@@ -362,7 +415,7 @@
 			name = "Main Screen";
 			sourceTree = "<group>";
 		};
-		1FFB8E781B8BD5B300042907 /* New Entry View Controllers */ = {
+		1FFB8E781B8BD5B300042907 /* New Entry View Controller */ = {
 			isa = PBXGroup;
 			children = (
 				1FFB8E791B8BD5E800042907 /* NewEntryViewController.h */,
@@ -372,7 +425,7 @@
 				1F2CBF7E1B8F6D2800F23B59 /* WorkDividePickerViewDataSource.h */,
 				1F2CBF7F1B8F6D2800F23B59 /* WorkDividePickerViewDataSource.m */,
 			);
-			name = "New Entry View Controllers";
+			name = "New Entry View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,19 +534,25 @@
 				1F2CBF6D1B8E190400F23B59 /* ChoresEntryViewController.m in Sources */,
 				1F2CBFA81B92347D00F23B59 /* EssayTasksTableViewDataSource.m in Sources */,
 				1F2CBF611B8D155A00F23B59 /* EssaysEntryViewController.m in Sources */,
+				1F21562C1B96363C00B17C66 /* EntryDisplayViewController.m in Sources */,
 				1FFB8E7B1B8BD5E800042907 /* NewEntryViewController.m in Sources */,
 				1F2CBF7D1B8E75F400F23B59 /* WorkTypePickerViewDataSource.m in Sources */,
 				1FFB8E6B1B8BC28B00042907 /* FAQViewController.m in Sources */,
+				1F2156321B9641E500B17C66 /* EntryDisplayTableViewDataSource.m in Sources */,
 				1F65B8891B94F3AC0045715F /* TestsTasksTableViewDataSource.m in Sources */,
 				1F2CBF921B8F7F8700F23B59 /* EntryController.m in Sources */,
 				1F65B88C1B94F7D50045715F /* ChoresTaskTableViewDataSource.m in Sources */,
 				1FFB8E771B8BD1EF00042907 /* LabelAndSublabelTableViewCell.m in Sources */,
+				1FDD4D461B976447008B605F /* MPCheckBox.m in Sources */,
+				1F2156351B96426E00B17C66 /* EntryDisplayTableViewCell.m in Sources */,
 				1F2CBF761B8E552B00F23B59 /* Model.xcdatamodeld in Sources */,
 				1F2CBFAB1B9234D500F23B59 /* TasksTableViewCell.m in Sources */,
 				1F2CBF9C1B8F878F00F23B59 /* Entry.m in Sources */,
 				1F2CBF8E1B8F7EBC00F23B59 /* Task.m in Sources */,
+				1FDD4D471B976447008B605F /* MPCheckBoxGroup.m in Sources */,
 				1F65B8861B94E57E0045715F /* ProjectTaskTableViewDataSource.m in Sources */,
 				1F2CBF5E1B8D0EA600F23B59 /* HomeworkEntryViewController.m in Sources */,
+				1FDD4D481B976447008B605F /* MPTapGetureRecognizer.m in Sources */,
 				1F2CBF701B8E3E4F00F23B59 /* PracticeEntryViewController.m in Sources */,
 				1FFB8E381B8BBCD000042907 /* AppDelegate.m in Sources */,
 				1FFB8E6A1B8BC28B00042907 /* FAQDetailViewController.m in Sources */,

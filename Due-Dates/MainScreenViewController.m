@@ -7,6 +7,8 @@
 //
 
 #import "MainScreenViewController.h"
+#import "EntryDisplayViewController.h"
+#import "EntryController.h"
 
 @interface MainScreenViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -32,12 +34,9 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString: @"New Entry"]) {
-        ((UIViewController *)segue.destinationViewController).title = @"New Entry-TM";
-    } else {
-        UITableViewCell *cellThatWasTapped = sender;
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:cellThatWasTapped];
-        NSString *titleOfNextVC;
+    UITableViewCell *cellThatWasTapped = sender;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cellThatWasTapped];
+    NSString *titleOfNextVC;
         
         switch (indexPath.row)
         {
@@ -71,8 +70,8 @@
             default:
                 break;
         }
+    
         ((UIViewController *)segue.destinationViewController).title = titleOfNextVC;
-    }
 
 }
 
